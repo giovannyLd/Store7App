@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/purple_700"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:useDefaultMargins="true"
+            >
+            <ImageButton
+                android:id="@+id/btnCereales"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cereales2320"
+                android:layout_column="0"
+                android:layout_row="0"/>
+
+            <ImageButton
+                android:id="@+id/btnFrutas"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:layout_gravity="right"
+                android:scaleType="centerCrop"
+                android:src="@drawable/frutas2320"
+                android:layout_column="1"
+                android:layout_row="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:scaleType="centerCrop"
+                android:text="         CEREALES"
+                android:layout_column="0"
+                android:layout_row="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:scaleType="centerCrop"
+                android:text="                          FRUTAS"
+                android:layout_column="1"
+                android:layout_row="1" />
+
+        </GridLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+        </LinearLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:useDefaultMargins="true">
+            <ImageButton
+                android:id="@+id/btnProteinas"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@drawable/proteina320"
+                android:layout_column="0"
+                android:layout_row="0"/>
+
+            <ImageButton
+                android:id="@+id/btnVerduras"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:layout_gravity="right"
+                android:scaleType="centerCrop"
+                android:src="@drawable/verduras1320"
+                android:layout_column="1"
+                android:layout_row="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:scaleType="centerCrop"
+                android:text="         PROTEINAS"
+                android:layout_column="0"
+                android:layout_row="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:scaleType="centerCrop"
+                android:text="                       VERDURAS"
+                android:layout_column="1"
+                android:layout_row="1" />
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+        </LinearLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:useDefaultMargins="true">
+            <ImageButton
+                android:id="@+id/btnSalsas"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@drawable/salsas"
+                android:layout_column="0"
+                android:layout_row="0"/>
+
+            <ImageButton
+                android:id="@+id/btnEmbutidos"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:layout_gravity="right"
+                android:scaleType="centerCrop"
+                android:src="@drawable/embutidos"
+                android:layout_column="1"
+                android:layout_row="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:scaleType="centerCrop"
+                android:text="         SALSAS"
+                android:layout_column="0"
+                android:layout_row="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:scaleType="centerCrop"
+                android:text="                       EMBUTIDOS"
+                android:layout_column="1"
+                android:layout_row="1" />
+
+        </GridLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
