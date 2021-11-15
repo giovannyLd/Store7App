@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Store7App">
         <activity
+            android:name=".Pruebas"
+            android:exported="false" />
+        <activity
             android:name=".Verduras"
             android:exported="false" />
         <activity
@@ -18,10 +21,6 @@
         <activity
             android:name=".Frutas"
             android:exported="false" />
-        <activity
-            android:name=".ui.login.Frutas"
-            android:exported="false"
-            android:label="@string/title_activity_frutas" />
         <activity
             android:name=".Cereales"
             android:exported="false" />

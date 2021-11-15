@@ -5,9 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
+    tools:context="Cereales"
     android:background="@color/purple_700"
     android:layout_gravity="center">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,6 +56,7 @@
                 android:layout_row="1" />
 
             <TextView
+                android:id="@+id/tvAvena"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
@@ -59,6 +64,76 @@
                 android:text="                          AVENA"
                 android:layout_column="1"
                 android:layout_row="1" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:gravity="center_vertical"
+                android:layout_gravity="center">
+                <Button
+                    android:id="@+id/btnMenosArroz"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:onClick="menosArroz"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvCanArroz"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:gravity="center" />
+                <Button
+                    android:id="@+id/btnMasArroz"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:gravity="center"
+                    android:onClick="masArroz"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:gravity="center_vertical"
+                android:layout_gravity="center">
+                <Button
+                    android:id="@+id/btnMenosAvena"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:onClick="menosAvena"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvCanAvena"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:gravity="center" />
+                <Button
+                    android:id="@+id/btnMasAvena"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:onClick="masAvena"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+
+            </LinearLayout>
+
+
 
 
         </GridLayout>
@@ -106,6 +181,65 @@
                 android:layout_column="1"
                 android:layout_row="1" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:gravity="center_vertical"
+                android:layout_gravity="center">
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:gravity="center" />
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:gravity="center_vertical"
+                android:layout_gravity="center">
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:gravity="center" />
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+
+            </LinearLayout>
+
         </GridLayout>
 
         <GridLayout
@@ -148,6 +282,62 @@
                 android:text="                       PASTA"
                 android:layout_column="1"
                 android:layout_row="1" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:gravity="center_vertical"
+                android:layout_gravity="center">
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:gravity="center" />
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:gravity="center_vertical"
+                android:layout_gravity="center">
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:gravity="center" />
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
 
         </GridLayout>
 
@@ -191,18 +381,66 @@
                 android:text="                       TRIGO"
                 android:layout_column="1"
                 android:layout_row="1" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:gravity="center_vertical"
+                android:layout_gravity="center">
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:gravity="center" />
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:gravity="center_vertical"
+                android:layout_gravity="center">
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:gravity="center" />
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
 
         </GridLayout>
 
-        <Spinner
-            android:id="@+id/listArroz"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_row="2"
-            android:layout_column="0" />
-
-
     </LinearLayout>
 
-
+    </ScrollView>
 </LinearLayout>
