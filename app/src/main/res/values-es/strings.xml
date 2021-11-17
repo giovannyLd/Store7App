@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Store7App</string>
+
+    <string name="title_activity_login2">Titulo_actividad_Login</string>
+    <string name="prompt_email">Correo</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Ingresa o Regitrar</string>
+    <string name="action_sign_in_short">Ingresa</string>
+    <string name="welcome">"Bienvenido!"</string>
+    <string name="invalid_username">Usuario no valido</string>
+    <string name="invalid_password">Password debe tener >5 caracteres</string>
+    <string name="login_failed">"Error inicio seccion"</string>
+    <string name="title_activity_frutas">Frutas</string>
+
+    <string-array name="cantidad">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+
+    </string-array>
+</resources>
