@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.google.firebase.firestore.FirebaseFirestore
+
 
 class FormActivity : AppCompatActivity() {
 
@@ -17,6 +19,7 @@ class FormActivity : AppCompatActivity() {
     private var registro: Button? = null
     private var terminos: CheckBox? = null
     private var irATerminos: TextView? = null
+    var db = FirebaseFirestore.getInstance()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -72,13 +75,19 @@ class FormActivity : AppCompatActivity() {
                                 var persona: Persona =
                                     Persona(nombre, apellido, cedula, telefono, correo, contrasena)
 
+                                Toast.makeText(getApplicationContext(), persona.nombre + "\n " + persona.apellido + "\n " + persona.cedula + "\n " + persona.telefono + "\n " + persona.correo + "\n " + persona.contrasena, Toast.LENGTH_LONG).show()
 
-                                Toast.makeText(
-                                    getApplicationContext(),
-                                    persona.nombre + "\n " + persona.apellido + "\n " + persona.cedula + "\n " +
-                                            persona.telefono + "\n " + persona.correo + "\n " + persona.contrasena,
-                                    Toast.LENGTH_LONG
-                                ).show()
+                            //    if(it.isSuccessful)
+                                db.collection("user").document(cedula).set(
+                                    hashMapOf("nombre" to nombre,
+                                              "apellido" to apellido,
+                                              "telefono" to telefono,
+                                              "correo" to correo,
+                                              "contrasena" to contrasena))
+
+                             //   showHome(cedula, ProviderType.BASIC)
+
+
                             } else {
                                 mensaje("Debe aceptar terminos y condiciones ")
                             }

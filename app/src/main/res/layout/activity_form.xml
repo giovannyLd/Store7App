@@ -45,6 +45,8 @@
             android:background="@drawable/style_border"
             android:hint="Nombre *"
             android:textColor="@color/white"
+            android:inputType="textCapSentences"
+            android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz "
             android:layout_margin="10dp"/>
         <EditText
             android:id="@+id/txtApellido"
@@ -53,6 +55,8 @@
             android:textColorHint="@color/colorHint"
             android:background="@drawable/style_border"
             android:hint="Apellido *"
+            android:inputType="textCapSentences"
+            android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz "
             android:textColor="@color/white"
             android:layout_margin="10dp"/>
         <EditText
@@ -72,7 +76,8 @@
                 android:textColorHint="@color/colorHint"
                 android:background="@drawable/style_border_line"
                 android:hint="N° Telefono fijo/celular *"
-                android:inputType="number"
+                android:inputType="phone"
+                android:digits="1234567890"
                 android:textColor="@color/white"
                 android:layout_margin="10dp"/>
             <EditText
