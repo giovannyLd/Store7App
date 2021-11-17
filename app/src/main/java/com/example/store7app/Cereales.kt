@@ -67,54 +67,58 @@ class Cereales : AppCompatActivity() {
         tvCanArroz = findViewById(R.id.tvCanArroz)
         btnMasArroz = findViewById(R.id.btnMasArroz)
         valorArroz=findViewById(R.id.valorArroz)
+        valorArroz!!.setText("0")
 
         tvAvena = findViewById(R.id.tvAvena)
         btnMenosAvena = findViewById(R.id.btnMenosAvena)
         tvCanAvena = findViewById(R.id.tvCanAvena)
         btnMasAvena = findViewById(R.id.btnMasAvena)
         valorAvena= findViewById(R.id.valorAvena)
+        valorAvena!!.setText("0")
 
         tvLenteja = findViewById(R.id.tvLenteja)
         btnMenosLenteja = findViewById(R.id.btnMenosLenteja)
         tvCanLenteja = findViewById(R.id.tvCanLenteja)
         btnMasLenteja = findViewById(R.id.btnMasLenteja)
         valorLenteja= findViewById(R.id.valorLenteja)
+        valorLenteja!!.setText("0")
 
         tvMaiz = findViewById(R.id.tvMaiz)
         btnMenosMaiz = findViewById(R.id.btnMenosMaiz)
         tvCanMaiz = findViewById(R.id.tvCanMaiz)
         btnMasMaiz = findViewById(R.id.btnMasMaiz)
         valorMaiz= findViewById(R.id.valorMaiz)
+        valorMaiz!!.setText("0")
 
         tvPan = findViewById(R.id.tvPan)
         btnMenosPan = findViewById(R.id.btnMenosPan)
         tvCanPan = findViewById(R.id.tvCanPan)
         btnMasPan = findViewById(R.id.btnMasPan)
         valorPan= findViewById(R.id.valorPan)
+        valorPan!!.setText("0")
 
         tvPasta = findViewById(R.id.tvPasta)
         btnMenosPasta = findViewById(R.id.btnMenosPasta)
         tvCanPasta = findViewById(R.id.tvCanPasta)
         btnMasPasta = findViewById(R.id.btnMasPasta)
         valorPasta= findViewById(R.id.valorPasta)
+        valorPasta!!.setText("0")
+
+
 
         tvQuinoa = findViewById(R.id.tvQuinoa)
         btnMenosQuinoa = findViewById(R.id.btnMenosQuinoa)
         tvCanQuinoa = findViewById(R.id.tvCanQuinoa)
         btnMasQuinoa = findViewById(R.id.btnMasQuinoa)
         valorQuinoa= findViewById(R.id.valorQuinoa)
-
-        tvQuinoa = findViewById(R.id.tvQuinoa)
-        btnMenosQuinoa = findViewById(R.id.btnMenosQuinoa)
-        tvCanQuinoa = findViewById(R.id.tvCanQuinoa)
-        btnMasQuinoa = findViewById(R.id.btnMasQuinoa)
-        valorQuinoa= findViewById(R.id.valorQuinoa)
+        valorQuinoa!!.setText("0")
 
         tvTrigo = findViewById(R.id.tvTrigo)
         btnMenosTrigo = findViewById(R.id.btnMenosTrigo)
         tvCanTrigo = findViewById(R.id.tvCanTrigo)
         btnMasTrigo = findViewById(R.id.btnMasTrigo)
         valorTrigo= findViewById(R.id.valorTrigo)
+        valorTrigo!!.setText("0")
 
     }
 
@@ -203,7 +207,13 @@ class Cereales : AppCompatActivity() {
         var pasta:Int = (valorPasta!!.text.toString()).toInt()
         var quinoa:Int = (valorQuinoa!!.text.toString()).toInt()
         var trigo:Int = (valorTrigo!!.text.toString()).toInt()
-        Toast.makeText(this, ""+ arroz+"\n"+avena+"\n"+lenteja+"\n"+maiz+"\n"+pan+"\n"+pasta+"\n"+quinoa+"\n"+trigo, Toast.LENGTH_SHORT).show()
+
+        var totalPedido = arroz+avena+lenteja+maiz+pan+pasta+quinoa+trigo
+        Toast.makeText(this, "Arroz = $ "+ arroz+"\nAvena = $ "+avena+"\nLentejas = $ "+lenteja+
+                "\nMaiz = $ "+maiz+"\nPan = $ "+pan+"\nPasta = $ "+pasta+"\nQuinoa = $ "+quinoa+
+                "\nTrigo = $ "+trigo +"\n\nVALOR TOTAL DEL PEDIDO ES = \$ "+ totalPedido, Toast.LENGTH_LONG).show()
+       // Toast.makeText(this, "VALOR TOTAL DEL PEDIDO ES = $ "+ totalPedido, Toast.LENGTH_LONG).show()
+
     }
 
 
