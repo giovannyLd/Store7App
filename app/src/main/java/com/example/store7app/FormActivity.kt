@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import com.google.firebase.firestore.FirebaseFirestore
 
 
@@ -78,14 +79,16 @@ class FormActivity : AppCompatActivity() {
                                 Toast.makeText(getApplicationContext(), persona.nombre + "\n " + persona.apellido + "\n " + persona.cedula + "\n " + persona.telefono + "\n " + persona.correo + "\n " + persona.contrasena, Toast.LENGTH_LONG).show()
 
                             //    if(it.isSuccessful)
-                                db.collection("user").document(cedula).set(
-                                    hashMapOf("nombre" to nombre,
-                                              "apellido" to apellido,
-                                              "telefono" to telefono,
-                                              "correo" to correo,
-                                              "contrasena" to contrasena))
+                                db.collection("Formulario").document(correo).set(
+                                    hashMapOf("nombre" to persona.nombre,
+                                              "apellido" to persona.apellido,
+                                              "telefono" to persona.telefono,
+                                              "cedula" to persona.cedula,
+                                              "contrasena" to persona.contrasena))
 
                              //   showHome(cedula, ProviderType.BASIC)
+
+
 
 
                             } else {

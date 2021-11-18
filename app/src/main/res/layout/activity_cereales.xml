@@ -55,7 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:text="    ARROZ= $ " />
+                    android:text="    ARROZ Lb= $ " />
                 <TextView
                     android:id="@+id/valorArroz"
                     android:layout_width="wrap_content"
@@ -212,7 +212,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:text="                     MAIZ= $ " />
+                    android:text="                     MAIZ U= $ " />
                 <TextView
                     android:id="@+id/valorMaiz"
                     android:layout_width="wrap_content"
