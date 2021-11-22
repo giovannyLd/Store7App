@@ -64,9 +64,9 @@ class Salsas : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cereales)
+        setContentView(R.layout.activity_salsas)
 
-        tvFruco = findViewById(R.id.tvFruco)
+          tvFruco = findViewById(R.id.tvFruco)
         btnMenosFruco = findViewById(R.id.btnMenosFruco)
         tvCanFruco = findViewById(R.id.tvCanFruco)
         btnMasFruco = findViewById(R.id.btnMasFruco)
@@ -303,11 +303,11 @@ class Salsas : AppCompatActivity() {
         intentCarrito.putExtra("mostaza", mostaza)
         intentCarrito.putExtra("ajo",ajo)
         intentCarrito.putExtra("bechamel",bechamel)
-        intentCarrito.putExtra("picante",picante)
+        intentCarrito.putExtra("Picante",picante)
         intentCarrito.putExtra("tartara",tartara)
         intentCarrito.putExtra("mayonesa",mayonesa)
         intentCarrito.putExtra("sverde",sverde)
         startActivity(intentCarrito)
 
-    }
-}
+
+    }}

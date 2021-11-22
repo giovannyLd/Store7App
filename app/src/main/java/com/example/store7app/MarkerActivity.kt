@@ -35,7 +35,9 @@ class MarkerActivity : AppCompatActivity() {
               }
             var botonsalsas: ImageButton = findViewById(R.id.btnSalsas)
             botonsalsas.setOnClickListener { view ->
-                val marker = Intent(this, Salsas::class.java)
+
+
+             val marker = Intent(this, Salsas::class.java)
                 startActivity(marker)
             }
         var botonembutidos: ImageButton = findViewById(R.id.btnEmbutidos)
