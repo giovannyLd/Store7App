@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val intento = Intent(this, LoginActivity::class.java)
+
         startActivity(intento)
 
     }
@@ -33,4 +35,11 @@ class MainActivity : AppCompatActivity() {
         startActivity(registro)
 
     }
+
+   /* fun registro(view: android.view.View) {
+
+        Toast.makeText(getApplicationContext(),"hola ",Toast.LENGTH_LONG).show()
+        val registro = Intent(this, FormActivity::class.java)
+        startActivity(registro)
+    }*/
 }

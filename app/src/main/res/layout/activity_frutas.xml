@@ -1,69 +1,567 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".ui.login.Frutas">
+    android:orientation="vertical"
+    tools:context=".Frutas"
+    android:background="@color/green_500"
+    android:layout_gravity="center">
 
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:hint="@string/prompt_email"
-        android:inputType="textEmailAddress"
-        android:selectAllOnFocus="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/prompt_password"
-        android:imeActionLabel="@string/action_sign_in_short"
-        android:imeOptions="actionDone"
-        android:inputType="textPassword"
-        android:selectAllOnFocus="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="64dp"
-        android:enabled="false"
-        android:text="@string/action_sign_in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.2" />
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true"
+                >
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/arandanos"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
 
-    <ProgressBar
-        android:id="@+id/loading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="64dp"
-        android:layout_marginBottom="64dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:layout_gravity="right"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/banana"
+                    android:layout_column="1"
+                    android:layout_row="0"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="0"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvArandanos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="ARANDANOS Lb= $ " />
+                    <TextView
+                        android:id="@+id/valorArandanos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="1"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvbanana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:scaleType="centerCrop"
+                        android:text="                      Banana= $ " />
+                    <TextView
+                        android:id="@+id/valorBanana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosArandanos"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:onClick="menosArandanos"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanArandanos"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasArandanos"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:gravity="center"
+                        android:onClick="masArandanos"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosBanana"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosBanana"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanBanana"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasBanana"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masBanana"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+
+
+                </LinearLayout>
+
+
+
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true">
+                <ImageButton
+
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cereza"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
+
+                <ImageButton
+
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:layout_gravity="right"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/durazno"
+                    android:layout_column="1"
+                    android:layout_row="0"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="0"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvCereza"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="    CEREZAS= $ " />
+                    <TextView
+                        android:id="@+id/valorCereza"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="1"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvDurazno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="                     Durazno U= $ " />
+                    <TextView
+                        android:id="@+id/valorDurazno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosCereza"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosCereza"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanCereza"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasCereza"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masCereza"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosDurazno"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosDurazno"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanDurazno"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasDurazno"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masDurazno"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+
+
+                </LinearLayout>
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true">
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/manzana"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:layout_gravity="right"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/patilla"
+                    android:layout_column="1"
+                    android:layout_row="0"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="0"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvManzana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="    MANZANA= $ " />
+                    <TextView
+                        android:id="@+id/valorManzana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="1"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvPatilla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="                       PATILLA= $ " />
+                    <TextView
+                        android:id="@+id/valorPatilla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosManzana"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosManzana"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanManzana"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasManzana"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masManzana"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosPatilla"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosPatilla"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanPatilla"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasPatilla"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masPatilla"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true">
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pina"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:layout_gravity="right"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/papaya"
+                    android:layout_column="1"
+                    android:layout_row="0"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="0"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvPina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="    PINA= $ " />
+                    <TextView
+                        android:id="@+id/valorPina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="1"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvPapaya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="                      PAPAYA= $ " />
+                    <TextView
+                        android:id="@+id/valorPapaya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosPina"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosPina"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanPina"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasPina"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masPina"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosPapaya"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosPapaya"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanPapaya"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasPapaya"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masPapaya"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+            </GridLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="envioCarrito"
+                android:text="Cargar a Carrito"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

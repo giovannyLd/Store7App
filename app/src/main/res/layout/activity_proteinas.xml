@@ -1,9 +1,568 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Proteinas">
+    android:orientation="vertical"
+    tools:context=".Proteinas"
+    android:background="@color/green_500"
+    android:layout_gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true"
+                >
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/atun"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:layout_gravity="right"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/huevos"
+                    android:layout_column="1"
+                    android:layout_row="0"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="0"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvAtun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="    ATUN Lb= $ " />
+                    <TextView
+                        android:id="@+id/valorAtun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="1"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvHuevos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:scaleType="centerCrop"
+                        android:text="                      HUEVOS= $ " />
+                    <TextView
+                        android:id="@+id/valorHuevos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosAtun"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:onClick="menosAtun"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanAtun"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasAtun"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:gravity="center"
+                        android:onClick="masAtun"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosHuevos"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosHuevos"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanHuevos"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasHuevos"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masHuevos"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+
+
+                </LinearLayout>
+
+
+
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true">
+                <ImageButton
+
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/leche"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
+
+                <ImageButton
+
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:layout_gravity="right"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mantequilla"
+                    android:layout_column="1"
+                    android:layout_row="0"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="0"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvLeche"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="    LECHES= $ " />
+                    <TextView
+                        android:id="@+id/valorLeche"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="1"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvMantequilla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="                     MANTEQUILLA U= $ " />
+                    <TextView
+                        android:id="@+id/valorMantequilla"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosLeche"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosLeche"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanLeche"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasLeche"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masLeche"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosMantequilla"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosMantequilla"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanMantequilla"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasMantequilla"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masMantequilla"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+
+
+                </LinearLayout>
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true">
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pescado"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:layout_gravity="right"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pollo"
+                    android:layout_column="1"
+                    android:layout_row="0"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="0"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvPescado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="    PESCADO= $ " />
+                    <TextView
+                        android:id="@+id/valorPescado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="1"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvPollo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="                       POLLO= $ " />
+                    <TextView
+                        android:id="@+id/valorPollo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosPescado"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosPescado"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanPescado"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasPescado"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masPescado"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosPollo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosPollo"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanPollo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasPollo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masPollo"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true">
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/queso"
+                    android:layout_column="0"
+                    android:layout_row="0"/>
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:layout_gravity="right"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sardinas"
+                    android:layout_column="1"
+                    android:layout_row="0"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="0"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvQueso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="    QUESO= $ " />
+                    <TextView
+                        android:id="@+id/valorQueso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_column="1"
+                    android:layout_row="1">
+                    <TextView
+                        android:id="@+id/tvSardinas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="                      SARDINAS= $ " />
+                    <TextView
+                        android:id="@+id/valorSardinas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosQueso"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosQueso"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanQueso"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasQueso"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masQueso"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center">
+                    <Button
+                        android:id="@+id/btnMenosSardinas"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:onClick="menosSardinas"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCanSardinas"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                    <Button
+                        android:id="@+id/btnMasSardinas"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:onClick="masSardinas"
+                        android:gravity="center"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+            </GridLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="envioCarrito"
+                android:text="Cargar a Carrito"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+

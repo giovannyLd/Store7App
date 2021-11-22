@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
+    tools:context=".FormActivity"
     android:background="@color/green_500">
 
     <LinearLayout
@@ -133,6 +133,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="ver terminos y condiciones"
+                    android:onClick="irATerminos"
                     android:textColor="@color/teal_200"/>
 
             </LinearLayout>
@@ -143,6 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_margin="20dp"
+                android:onClick="envio"
 
                 android:text="Guardar" />
 
