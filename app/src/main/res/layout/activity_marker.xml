@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/green_500"
+    android:background="@color/morado"
     android:layout_gravity="center">
 
     <LinearLayout
@@ -19,48 +19,54 @@
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:useDefaultMargins="true"
-            >
+            android:useDefaultMargins="true">
+
             <ImageButton
                 android:id="@+id/btnCereales"
                 android:layout_width="150dp"
                 android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="0"
                 android:backgroundTint="#00FFFFFF"
                 android:scaleType="centerCrop"
-                android:src="@drawable/cereales2320"
-                android:layout_column="0"
-                android:layout_row="0"/>
+                android:src="@drawable/cereales2320" />
 
             <ImageButton
                 android:id="@+id/btnFrutas"
                 android:layout_width="150dp"
                 android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="right"
                 android:adjustViewBounds="true"
                 android:backgroundTint="#00FFFFFF"
-                android:layout_gravity="right"
                 android:scaleType="centerCrop"
-                android:src="@drawable/frutas2320"
-                android:layout_column="1"
-                android:layout_row="0"/>
+                android:src="@drawable/frutas2320" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:scaleType="centerCrop"
-                android:text="         CEREALES"
+                android:layout_row="1"
                 android:layout_column="0"
-                android:layout_row="1" />
+                android:scaleType="centerCrop"
+                android:text=    "@string/text_cereal"
+                android:textColor="@color/white"
+                android:layout_marginLeft="30dp"
+                android:textSize="15dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:scaleType="centerCrop"
-                android:text="                          FRUTAS"
+                android:layout_row="1"
                 android:layout_column="1"
-                android:layout_row="1" />
+                android:scaleType="centerCrop"
+                android:text="@string/text_fruta"
+                android:textSize="15dp"
+                android:layout_marginLeft="80dp"
+                android:textColor="@color/white" />
 
         </GridLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp">
@@ -97,15 +103,19 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:scaleType="centerCrop"
-                android:text="         PROTEINAS"
+                android:text="@string/text_proteina"
                 android:layout_column="0"
+                android:layout_marginLeft="40dp"
+                android:textSize="15dp"
                 android:layout_row="1" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:scaleType="centerCrop"
-                android:text="                       VERDURAS"
+                android:text="@string/text_verduras"
+                android:layout_marginLeft="50dp"
+                android:textSize="15dp"
                 android:layout_column="1"
                 android:layout_row="1" />
 
@@ -147,7 +157,9 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:scaleType="centerCrop"
-                android:text="         SALSAS"
+                android:text="@string/text_salsas"
+                android:layout_marginLeft="50dp"
+                android:textSize="15dp"
                 android:layout_column="0"
                 android:layout_row="1" />
             <TextView
@@ -155,7 +167,9 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:scaleType="centerCrop"
-                android:text="                       EMBUTIDOS"
+                android:text="@string/text_embu"
+                android:layout_marginLeft="70dp"
+                android:textSize="15dp"
                 android:layout_column="1"
                 android:layout_row="1" />
 

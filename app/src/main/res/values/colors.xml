@@ -13,5 +13,9 @@
     <color name="colorHint">#4BFBFDFD</color>
 
     <color name="green_500">#245735</color>
+    <color name="pink">#E91E98</color>
+    <color name="crema">#AAF38E</color>
+    <color name="morado">#A299FF</color>
+
 
 </resources>

@@ -11,6 +11,18 @@
     <string name="invalid_password">Password debe tener >5 caracteres</string>
     <string name="login_failed">"Error inicio seccion"</string>
     <string name="title_activity_frutas">Frutas</string>
+    <string name="hint_password">Tu password</string>
+    <string name="hint_username">Nombre</string>
+    <string name="text_start">Inicio Seccion</string>
+    <string name="text_register">Registrarse</string>
+    <string name="text_login">Ingresar</string>
+    <string name="text_robot">No soy robot</string>
+    <string name="text_cereal">CEREALES</string>
+    <string name="text_fruta">FRUTA</string>
+    <string name="text_proteina">PROTEINA</string>
+    <string name="text_verduras">VERDURAS</string>
+    <string name="text_salsas">SALSAS</string>
+    <string name="text_embu">EMBUTIDOS</string>
 
     <string-array name="cantidad">
         <item>0</item>

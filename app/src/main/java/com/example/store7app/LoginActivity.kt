@@ -43,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
                 if (usuario == "giovanny" && contrasena=="1234") {
                     if(robot.isChecked){
                         vista.text="OK USUARIO LOGUEADO"
-                        vista.setTextColor( Color.GREEN)
+                        vista.setTextColor(Color.GREEN)
                         Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_LONG).show()
 
                         val marker = Intent(this,MarkerActivity::class.java)
@@ -52,8 +52,7 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(getApplicationContext(), "CHEQUEA QUE NO ERES UN ROBOT",
                             Toast.LENGTH_LONG).show()
                         vista.text="ERROR DE LOGUEO"
-                        vista.setTextColor( Color.RED )
-
+                        vista.setTextColor( Color.RED)
                     }
                 } else {
                     Toast.makeText(getApplicationContext(),"USUARIO NO EXISTE O PASSWORD INCORRECTO",

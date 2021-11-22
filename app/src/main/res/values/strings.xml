@@ -11,6 +11,18 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_frutas">Frutas</string>
+    <string name="hint_password">Your password</string>
+    <string name="hint_username">Username</string>
+    <string name="text_start">Section Start</string>
+    <string name="text_register">Check in</string>
+    <string name="text_login">Log in</string>
+    <string name="text_robot">I am not a robot</string>
+    <string name="text_cereal">CEREAL</string>
+    <string name="text_fruta">FRUIT</string>
+    <string name="text_proteina">PROTEIN</string>
+    <string name="text_verduras">VEGETABLES</string>
+    <string name="text_salsas">SAUCES</string>
+    <string name="text_embu">COLD MEAT</string>
 
     <string-array name="cantidad">
         <item>0</item>
