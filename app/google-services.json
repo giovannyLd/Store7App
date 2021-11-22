@@ -1,33 +1,33 @@
-  {
+{
   "project_info": {
-    "project_number": "395859627926",
-    "project_id": "supermercado-649e8",
-    "storage_bucket": "supermercado-649e8.appspot.com"
+    "project_number": "386558432597",
+    "project_id": "appmarker-9c2b7",
+    "storage_bucket": "appmarker-9c2b7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:395859627926:android:7ec59e248abeafa32b57b7",
+        "mobilesdk_app_id": "1:386558432597:android:af51d69d053f1046688bdc",
         "android_client_info": {
           "package_name": "com.example.store7app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "395859627926-oln9e7d9qbfd5br9miih78fssff85h1a.apps.googleusercontent.com",
+          "client_id": "386558432597-uln307d3gmrpdeoo76anbdct31135ode.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDSXq7LrxjvcbQGxz2bW6Hgzoi0KeltJaI"
+          "current_key": "AIzaSyAKf6jTLowKJpv1ScNe54h5TwnS1GV66YI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "395859627926-oln9e7d9qbfd5br9miih78fssff85h1a.apps.googleusercontent.com",
+              "client_id": "386558432597-uln307d3gmrpdeoo76anbdct31135ode.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -71,7 +71,7 @@ class Proteinas : AppCompatActivity() {
         tvCanAtun = findViewById(R.id.tvCanAtun)
         btnMasAtun = findViewById(R.id.btnMasAtun)
         valorAtun = findViewById(R.id.valorAtun)
-        valorAtun!!.setText("0")
+        valorAtun!!.setText("200")
 
         tvHuevos = findViewById(R.id.tvHuevos)
         btnMenosHuevos = findViewById(R.id.btnMenosHuevos)

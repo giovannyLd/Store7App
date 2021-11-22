@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Cereales"
+    tools:context=".Salsas"
     android:background="@color/green_500"
     android:layout_gravity="center">
 
@@ -30,7 +30,7 @@
                     android:layout_height="100dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/arroz"
+                    android:src="@drawable/fruco"
                     android:layout_column="0"
                     android:layout_row="0"/>
 
@@ -41,7 +41,7 @@
                     android:backgroundTint="#00FFFFFF"
                     android:layout_gravity="right"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/avena"
+                    android:src="@drawable/mostaza"
                     android:layout_column="1"
                     android:layout_row="0"/>
                 <LinearLayout
@@ -51,13 +51,13 @@
                     android:layout_column="0"
                     android:layout_row="1">
                     <TextView
-                        android:id="@+id/tvArroz"
+                        android:id="@+id/tvFruco"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    ARROZ Lb= $ " />
+                        android:text="    FRUCO Lb= $ " />
                     <TextView
-                        android:id="@+id/valorArroz"
+                        android:id="@+id/valorFruco"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"/>
@@ -70,14 +70,14 @@
                     android:layout_column="1"
                     android:layout_row="1">
                     <TextView
-                        android:id="@+id/tvAvena"
+                        android:id="@+id/tvMostaza"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         android:scaleType="centerCrop"
-                        android:text="                      AVENA= $ " />
+                        android:text="                      MOSTAZA= $ " />
                     <TextView
-                        android:id="@+id/valorAvena"
+                        android:id="@+id/valorMostaza"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"/>
@@ -90,29 +90,29 @@
                     android:gravity="center_vertical"
                     android:layout_gravity="center">
                     <Button
-                        android:id="@+id/btnMenosArroz"
+                        android:id="@+id/btnMenosFruco"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="-"
                         android:textColor="@color/white"
                         android:gravity="center"
-                        android:onClick="menosArroz"
+                        android:onClick="menosFruco"
                         android:textSize="10dp"/>
 
                     <TextView
-                        android:id="@+id/tvCanArroz"
+                        android:id="@+id/tvCanFruco"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:text="0"
                         android:textColor="@color/white"
                         android:gravity="center" />
                     <Button
-                        android:id="@+id/btnMasArroz"
+                        android:id="@+id/btnMasFruco"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="+"
                         android:gravity="center"
-                        android:onClick="masArroz"
+                        android:onClick="masFruco"
                         android:textColor="@color/white"/>
                 </LinearLayout>
                 <LinearLayout
@@ -123,28 +123,28 @@
                     android:gravity="center_vertical"
                     android:layout_gravity="center">
                     <Button
-                        android:id="@+id/btnMenosAvena"
+                        android:id="@+id/btnMenosMostaza"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="-"
-                        android:onClick="menosAvena"
+                        android:onClick="menosMostaza"
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:textSize="10dp"/>
 
                     <TextView
-                        android:id="@+id/tvCanAvena"
+                        android:id="@+id/tvCanMostaza"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:text="0"
                         android:textColor="@color/white"
                         android:gravity="center" />
                     <Button
-                        android:id="@+id/btnMasAvena"
+                        android:id="@+id/btnMasMostaza"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="+"
-                        android:onClick="masAvena"
+                        android:onClick="masMostaza"
                         android:gravity="center"
                         android:textColor="@color/white"/>
 
@@ -166,7 +166,7 @@
                     android:layout_height="100dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/lenteja"
+                    android:src="@drawable/ajo"
                     android:layout_column="0"
                     android:layout_row="0"/>
 
@@ -178,7 +178,7 @@
                     android:backgroundTint="#00FFFFFF"
                     android:layout_gravity="right"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/maiz"
+                    android:src="@drawable/bechamel"
                     android:layout_column="1"
                     android:layout_row="0"/>
 
@@ -189,13 +189,13 @@
                     android:layout_column="0"
                     android:layout_row="1">
                     <TextView
-                        android:id="@+id/tvLenteja"
+                        android:id="@+id/tvAjo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    LENTEJAS= $ " />
+                        android:text="    AJOS= $ " />
                     <TextView
-                        android:id="@+id/valorLenteja"
+                        android:id="@+id/valorAjo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"/>
@@ -208,13 +208,13 @@
                     android:layout_column="1"
                     android:layout_row="1">
                     <TextView
-                        android:id="@+id/tvMaiz"
+                        android:id="@+id/tvBechamel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="                     MAIZ U= $ " />
+                        android:text="                     BECHAMEL U= $ " />
                     <TextView
-                        android:id="@+id/valorMaiz"
+                        android:id="@+id/valorBechamel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"/>
@@ -229,28 +229,28 @@
                     android:gravity="center_vertical"
                     android:layout_gravity="center">
                     <Button
-                        android:id="@+id/btnMenosLenteja"
+                        android:id="@+id/btnMenosAjo"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="-"
-                        android:onClick="menosLenteja"
+                        android:onClick="menosAjo"
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:textSize="10dp"/>
 
                     <TextView
-                        android:id="@+id/tvCanLenteja"
+                        android:id="@+id/tvCanAjo"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:text="0"
                         android:textColor="@color/white"
                         android:gravity="center" />
                     <Button
-                        android:id="@+id/btnMasLenteja"
+                        android:id="@+id/btnMasAjo"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="+"
-                        android:onClick="masLenteja"
+                        android:onClick="masAjo"
                         android:gravity="center"
                         android:textColor="@color/white"/>
                 </LinearLayout>
@@ -262,28 +262,28 @@
                     android:gravity="center_vertical"
                     android:layout_gravity="center">
                     <Button
-                        android:id="@+id/btnMenosMaiz"
+                        android:id="@+id/btnMenosBechamel"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="-"
-                        android:onClick="menosMaiz"
+                        android:onClick="menosBechamel"
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:textSize="10dp"/>
 
                     <TextView
-                        android:id="@+id/tvCanMaiz"
+                        android:id="@+id/tvCanBechamel"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:text="0"
                         android:textColor="@color/white"
                         android:gravity="center" />
                     <Button
-                        android:id="@+id/btnMasMaiz"
+                        android:id="@+id/btnMasBechamel"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="+"
-                        android:onClick="masMaiz"
+                        android:onClick="masBechamel"
                         android:gravity="center"
                         android:textColor="@color/white"/>
 
@@ -301,7 +301,7 @@
                     android:layout_height="100dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/pan"
+                    android:src="@drawable/picante"
                     android:layout_column="0"
                     android:layout_row="0"/>
 
@@ -312,7 +312,7 @@
                     android:backgroundTint="#00FFFFFF"
                     android:layout_gravity="right"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/pasta"
+                    android:src="@drawable/tartara"
                     android:layout_column="1"
                     android:layout_row="0"/>
 
@@ -323,13 +323,13 @@
                     android:layout_column="0"
                     android:layout_row="1">
                     <TextView
-                        android:id="@+id/tvPan"
+                        android:id="@+id/tvPicante"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    PAN= $ " />
+                        android:text="    PICANTE= $ " />
                     <TextView
-                        android:id="@+id/valorPan"
+                        android:id="@+id/valorPicante"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"/>
@@ -342,13 +342,13 @@
                     android:layout_column="1"
                     android:layout_row="1">
                     <TextView
-                        android:id="@+id/tvPasta"
+                        android:id="@+id/tvTartara"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="                       PASTA= $ " />
+                        android:text="                       TARTARA= $ " />
                     <TextView
-                        android:id="@+id/valorPasta"
+                        android:id="@+id/valorTartara"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"/>
@@ -362,28 +362,28 @@
                     android:gravity="center_vertical"
                     android:layout_gravity="center">
                     <Button
-                        android:id="@+id/btnMenosPan"
+                        android:id="@+id/btnMenosPicante"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="-"
-                        android:onClick="menosPan"
+                        android:onClick="menosPicante"
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:textSize="10dp"/>
 
                     <TextView
-                        android:id="@+id/tvCanPan"
+                        android:id="@+id/tvCanPicante"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:text="0"
                         android:textColor="@color/white"
                         android:gravity="center" />
                     <Button
-                        android:id="@+id/btnMasPan"
+                        android:id="@+id/btnMasPicante"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="+"
-                        android:onClick="masPan"
+                        android:onClick="masPicante"
                         android:gravity="center"
                         android:textColor="@color/white"/>
                 </LinearLayout>
@@ -395,28 +395,28 @@
                     android:gravity="center_vertical"
                     android:layout_gravity="center">
                     <Button
-                        android:id="@+id/btnMenosPasta"
+                        android:id="@+id/btnMenosTartara"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="-"
-                        android:onClick="menosPasta"
+                        android:onClick="menosTartara"
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:textSize="10dp"/>
 
                     <TextView
-                        android:id="@+id/tvCanPasta"
+                        android:id="@+id/tvCanTartara"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:text="0"
                         android:textColor="@color/white"
                         android:gravity="center" />
                     <Button
-                        android:id="@+id/btnMasPasta"
+                        android:id="@+id/btnMasTartara"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="+"
-                        android:onClick="masPasta"
+                        android:onClick="masTartara"
                         android:gravity="center"
                         android:textColor="@color/white"/>
                 </LinearLayout>
@@ -432,7 +432,7 @@
                     android:layout_height="100dp"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/quinoa"
+                    android:src="@drawable/mayonesa"
                     android:layout_column="0"
                     android:layout_row="0"/>
 
@@ -443,7 +443,7 @@
                     android:backgroundTint="#00FFFFFF"
                     android:layout_gravity="right"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/trigo"
+                    android:src="@drawable/sverde"
                     android:layout_column="1"
                     android:layout_row="0"/>
 
@@ -454,13 +454,13 @@
                     android:layout_column="0"
                     android:layout_row="1">
                     <TextView
-                        android:id="@+id/tvQuinoa"
+                        android:id="@+id/tvMayonesa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    QUINOA= $ " />
+                        android:text="    MAYONESA= $ " />
                     <TextView
-                        android:id="@+id/valorQuinoa"
+                        android:id="@+id/valorMayonesa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"/>
@@ -473,13 +473,13 @@
                     android:layout_column="1"
                     android:layout_row="1">
                     <TextView
-                        android:id="@+id/tvTrigo"
+                        android:id="@+id/tvSverde"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="                      TRIGO= $ " />
+                        android:text="                      VERDE= $ " />
                     <TextView
-                        android:id="@+id/valorTrigo"
+                        android:id="@+id/valorSverde"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"/>
@@ -493,28 +493,28 @@
                     android:gravity="center_vertical"
                     android:layout_gravity="center">
                     <Button
-                        android:id="@+id/btnMenosQuinoa"
+                        android:id="@+id/btnMenosMayonesa"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="-"
-                        android:onClick="menosQuinoa"
+                        android:onClick="menosMayonesa"
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:textSize="10dp"/>
 
                     <TextView
-                        android:id="@+id/tvCanQuinoa"
+                        android:id="@+id/tvCanMayonesa"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:text="0"
                         android:textColor="@color/white"
                         android:gravity="center" />
                     <Button
-                        android:id="@+id/btnMasQuinoa"
+                        android:id="@+id/btnMasMayonesa"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="+"
-                        android:onClick="masQuinoa"
+                        android:onClick="masMayonesa"
                         android:gravity="center"
                         android:textColor="@color/white"/>
                 </LinearLayout>
@@ -526,28 +526,28 @@
                     android:gravity="center_vertical"
                     android:layout_gravity="center">
                     <Button
-                        android:id="@+id/btnMenosTrigo"
+                        android:id="@+id/btnMenosSverde"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="-"
-                        android:onClick="menosTrigo"
+                        android:onClick="menosSverde"
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:textSize="10dp"/>
 
                     <TextView
-                        android:id="@+id/tvCanTrigo"
+                        android:id="@+id/tvCanSverde"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:text="0"
                         android:textColor="@color/white"
                         android:gravity="center" />
                     <Button
-                        android:id="@+id/btnMasTrigo"
+                        android:id="@+id/btnMasSverde"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:text="+"
-                        android:onClick="masTrigo"
+                        android:onClick="masSverde"
                         android:gravity="center"
                         android:textColor="@color/white"/>
                 </LinearLayout>

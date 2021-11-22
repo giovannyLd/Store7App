@@ -37,11 +37,6 @@ class FormActivity : AppCompatActivity() {
         terminos = findViewById<CheckBox>(R.id.chTerminos)
         irATerminos = findViewById<TextView>(R.id.irATerminos)
 
-
-
-
-
-
     }
 
 

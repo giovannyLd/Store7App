@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.Toast
 
 class MarkerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,14 +28,24 @@ class MarkerActivity : AppCompatActivity() {
         }
         var botonproteinas: ImageButton = findViewById(R.id.btnProteinas)
         botonproteinas.setOnClickListener { view ->
+
+
             val marker = Intent(this,Proteinas::class.java)
-            startActivity(marker)
-        }
-        var botonsalsas: ImageButton = findViewById(R.id.btnProteinas)
-        botonsalsas.setOnClickListener { view ->
-            val marker = Intent(this,Salsas::class.java)
+               startActivity(marker)
+              }
+            var botonsalsas: ImageButton = findViewById(R.id.btnSalsas)
+            botonsalsas.setOnClickListener { view ->
+                val marker = Intent(this, Salsas::class.java)
+                startActivity(marker)
+            }
+        var botonembutidos: ImageButton = findViewById(R.id.btnEmbutidos)
+             botonembutidos.setOnClickListener { view ->
+
+
+            val marker = Intent(this, Embutidos::class.java)
             startActivity(marker)
         }
 
-    }
-}
+        }}
+
+

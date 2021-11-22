@@ -7,15 +7,20 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.firestore.FirebaseFirestore
 import androidx.appcompat.app.AlertDialog as AlertDialog1
 
 private var etiqueta: TextView?=null
 class Pruebas : AppCompatActivity() {
+
+    var db = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pruebas)
 
         etiqueta=findViewById(R.id.titulo)
+
     }
 
     fun pruebaFuncion(view: android.view.View) {
@@ -49,6 +54,14 @@ class Pruebas : AppCompatActivity() {
                 " trigo $trigo \n" +
                 " suma $suma \n" +
                 " \$")
+
+        db.collection("listaAlimentos").document("giovanny").set(
+
+            hashMapOf(
+                "producto" to "arroz",
+                "valor" to arroz
+            )
+        )
 
 
 
