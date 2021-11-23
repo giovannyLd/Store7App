@@ -299,15 +299,26 @@ class Salsas : AppCompatActivity() {
             Toast.LENGTH_LONG
         ).show()
         var intentCarrito = Intent(this, Pruebas::class.java)
-        intentCarrito.putExtra("fruco", fruco)
-        intentCarrito.putExtra("mostaza", mostaza)
-        intentCarrito.putExtra("ajo",ajo)
-        intentCarrito.putExtra("bechamel",bechamel)
-        intentCarrito.putExtra("Picante",picante)
-        intentCarrito.putExtra("tartara",tartara)
-        intentCarrito.putExtra("mayonesa",mayonesa)
-        intentCarrito.putExtra("sverde",sverde)
+
+        intentCarrito.putExtra("categoria","Salsas")
+        intentCarrito.putExtra("producto1","fruco")
+        intentCarrito.putExtra("producto2","mostaza")
+        intentCarrito.putExtra("producto3","ajo")
+        intentCarrito.putExtra("producto4","bechamel")
+        intentCarrito.putExtra("producto5","picante")
+        intentCarrito.putExtra("producto6","tartara")
+        intentCarrito.putExtra("producto7","mayonesa")
+        intentCarrito.putExtra("producto8","sverde")
+        intentCarrito.putExtra("valor1", fruco)
+        intentCarrito.putExtra("valor2", mostaza)
+        intentCarrito.putExtra("valor3",ajo)
+        intentCarrito.putExtra("valor4",bechamel)
+        intentCarrito.putExtra("valor5",picante)
+        intentCarrito.putExtra("valor6",tartara)
+        intentCarrito.putExtra("valor7",mayonesa)
+        intentCarrito.putExtra("valor8",sverde)
         startActivity(intentCarrito)
+
 
 
     }}

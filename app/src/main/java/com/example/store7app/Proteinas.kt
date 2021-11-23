@@ -299,15 +299,26 @@ class Proteinas : AppCompatActivity() {
             Toast.LENGTH_LONG
         ).show()
         var intentCarrito = Intent(this, Pruebas::class.java)
-        intentCarrito.putExtra("atun", atun)
-        intentCarrito.putExtra("huevos", huevos)
-        intentCarrito.putExtra("leche",leche)
-        intentCarrito.putExtra("mantequilla",mantequilla)
-        intentCarrito.putExtra("pescado",pescado)
-        intentCarrito.putExtra("pollo",pollo)
-        intentCarrito.putExtra("queso",queso)
-        intentCarrito.putExtra("sardinas",sardinas)
+
+        intentCarrito.putExtra("categoria","Proteinas")
+        intentCarrito.putExtra("producto1","atun")
+        intentCarrito.putExtra("producto2","huevos")
+        intentCarrito.putExtra("producto3","leche")
+        intentCarrito.putExtra("producto4","mantequilla")
+        intentCarrito.putExtra("producto5","pescado")
+        intentCarrito.putExtra("producto6","pollo")
+        intentCarrito.putExtra("producto7","queso")
+        intentCarrito.putExtra("producto8","sardina")
+        intentCarrito.putExtra("valor1", atun)
+        intentCarrito.putExtra("valor2", huevos)
+        intentCarrito.putExtra("valor3",leche)
+        intentCarrito.putExtra("valor4",mantequilla)
+        intentCarrito.putExtra("valor5",pescado)
+        intentCarrito.putExtra("valor6",pollo)
+        intentCarrito.putExtra("valor7",queso)
+        intentCarrito.putExtra("valor8",sardinas)
         startActivity(intentCarrito)
+
 
     }
 }

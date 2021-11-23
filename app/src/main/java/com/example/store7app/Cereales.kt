@@ -298,15 +298,28 @@ class Cereales : AppCompatActivity() {
                     "\nTrigo = $ " + trigo,
             Toast.LENGTH_LONG
         ).show()
+
+        val cereales= listOf<String>("Arroz","Avena","Lenteja","Maiz","Pan","Pasta","Quinoa","Trigo")
+        var valorCereales= mutableListOf<String>(arroz,avena,lenteja,maiz,pan,pasta,quinoa,trigo)
         var intentCarrito = Intent(this, Pruebas::class.java)
-        intentCarrito.putExtra("arroz", arroz)
-        intentCarrito.putExtra("avena", avena)
-        intentCarrito.putExtra("lenteja",lenteja)
-        intentCarrito.putExtra("maiz",maiz)
-        intentCarrito.putExtra("pan",pan)
-        intentCarrito.putExtra("pasta",pasta)
-        intentCarrito.putExtra("quinoa",quinoa)
-        intentCarrito.putExtra("trigo",trigo)
+
+        intentCarrito.putExtra("categoria","Cereales")
+        intentCarrito.putExtra("producto1","arroz")
+        intentCarrito.putExtra("producto2","avena")
+        intentCarrito.putExtra("producto3","lenteja")
+        intentCarrito.putExtra("producto4","maiz")
+        intentCarrito.putExtra("producto5","pan")
+        intentCarrito.putExtra("producto6","pasta")
+        intentCarrito.putExtra("producto7","quinoa")
+        intentCarrito.putExtra("producto8","trigo")
+        intentCarrito.putExtra("valor1", arroz)
+        intentCarrito.putExtra("valor2", avena)
+        intentCarrito.putExtra("valor3",lenteja)
+        intentCarrito.putExtra("valor4",maiz)
+        intentCarrito.putExtra("valor5",pan)
+        intentCarrito.putExtra("valor6",pasta)
+        intentCarrito.putExtra("valor7",quinoa)
+        intentCarrito.putExtra("valor8",trigo)
         startActivity(intentCarrito)
 
     }
