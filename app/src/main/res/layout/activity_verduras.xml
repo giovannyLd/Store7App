@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Verduras"
-    android:background="@color/green_500"
+    android:background="@color/morado"
     android:layout_gravity="center">
 
     <ScrollView

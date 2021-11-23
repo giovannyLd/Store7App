@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/green_500">
+    android:background="@color/morado">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,8 @@
             android:id="@+id/titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="FORMULARIO"
+            android:text="@string/text_form"
+            android:layout_marginLeft="30dp"
             android:textSize="30dp"
             android:textColor="@color/white"
             android:gravity="center_horizontal"
@@ -44,7 +45,7 @@
             android:layout_height="match_parent"
             android:textColorHint="@color/colorHint"
             android:background="@drawable/style_border"
-            android:hint="Nombre *"
+            android:hint="@string/text_nom"
             android:textColor="@color/white"
             android:inputType="textCapSentences"
             android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz "
@@ -55,7 +56,7 @@
             android:layout_height="match_parent"
             android:textColorHint="@color/colorHint"
             android:background="@drawable/style_border"
-            android:hint="Apellido *"
+            android:hint="@string/text_apell"
             android:inputType="textCapSentences"
             android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz "
             android:textColor="@color/white"
@@ -66,7 +67,7 @@
             android:layout_height="match_parent"
             android:textColorHint="@color/colorHint"
             android:background="@drawable/style_border_line"
-            android:hint="N° Cedula *"
+            android:hint="@string/text_doc"
             android:inputType="number"
             android:textColor="@color/white"
             android:layout_margin="10dp"/>
@@ -76,7 +77,7 @@
                 android:layout_height="match_parent"
                 android:textColorHint="@color/colorHint"
                 android:background="@drawable/style_border_line"
-                android:hint="N° Telefono fijo/celular *"
+                android:hint="@string/text_tel"
                 android:inputType="phone"
                 android:digits="1234567890"
                 android:textColor="@color/white"
@@ -87,7 +88,7 @@
                 android:layout_height="match_parent"
                 android:textColorHint="@color/colorHint"
                 android:background="@drawable/style_border_line"
-                android:hint="Correo *"
+                android:hint="@string/text_corr"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/white"
                 android:layout_margin="10dp"/>
@@ -97,7 +98,7 @@
                 android:layout_height="match_parent"
                 android:textColorHint="@color/colorHint"
                 android:background="@drawable/style_border_line"
-                android:hint="Contraseña *"
+                android:hint="@string/text_cont"
                 android:inputType="textPassword"
                 android:textColor="@color/white"
                 android:layout_margin="10dp"/>
@@ -107,7 +108,7 @@
                 android:layout_height="match_parent"
                 android:textColorHint="@color/colorHint"
                 android:background="@drawable/style_border_line"
-                android:hint="Confirmar Contraseña *"
+                android:hint="@string/text_contp"
                 android:inputType="textPassword"
                 android:textColor="@color/white"
                 android:layout_margin="10dp"
@@ -125,14 +126,14 @@
                     android:id="@+id/chTerminos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Acepta terminos y condiciones"
+                    android:text="@string/text_atc"
                     android:textColor="@color/white"
                     />
                 <TextView
                     android:id="@+id/irATerminos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ver terminos y condiciones"
+                    android:text="@string/text_vtc"
                     android:textColor="@color/teal_200"/>
 
             </LinearLayout>
@@ -144,7 +145,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_margin="20dp"
 
-                android:text="Guardar" />
+                android:text="@string/text_guardar" />
 
 
 

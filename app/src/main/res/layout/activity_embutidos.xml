@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Embutidos"
-    android:background="@color/green_500"
+    android:background="@color/morado"
     android:layout_gravity="center">
 
   <ScrollView
@@ -55,7 +55,9 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textColor="@color/white"
-              android:text="    CHORIZO Lb= $ " />
+              android:text="    CHORIZO Lb= $ "
+              android:layout_marginLeft="30dp"
+              android:textSize="15dp"/>
           <TextView
               android:id="@+id/valorChorizo"
               android:layout_width="wrap_content"
@@ -75,7 +77,9 @@
               android:layout_height="wrap_content"
               android:textColor="@color/white"
               android:scaleType="centerCrop"
-              android:text="                      PIZZA= $ " />
+              android:text="                      PIZZA= $ "
+              android:layout_marginLeft="10dp"
+              android:textSize="15dp"/>
           <TextView
               android:id="@+id/valorPizza"
               android:layout_width="wrap_content"
@@ -193,7 +197,9 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textColor="@color/white"
-              android:text="    HAMBURGUESAS= $ " />
+              android:text="@string/text_hamb"
+              android:layout_marginLeft="30dp"
+              android:textSize="15dp"/>
           <TextView
               android:id="@+id/valorHamburguesa"
               android:layout_width="wrap_content"
@@ -212,8 +218,12 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textColor="@color/white"
-              android:text="                     JAMON U= $ " />
+              android:text="@string/text_jam"
+              android:layout_marginLeft="40dp"
+              android:textSize="15dp"/>
           <TextView
+
+
               android:id="@+id/valorJamon"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -327,7 +337,9 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textColor="@color/white"
-              android:text="    MORTADELA= $ " />
+              android:text="@string/text_mor"
+              android:layout_marginLeft="30dp"
+              android:textSize="15dp"/>
           <TextView
               android:id="@+id/valorMortadela"
               android:layout_width="wrap_content"
@@ -458,7 +470,9 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textColor="@color/white"
-              android:text="    SALCHICHAS= $ " />
+              android:text="@string/text_salc"
+              android:layout_marginLeft="30dp"
+              android:textSize="15dp"/>
           <TextView
               android:id="@+id/valorSalchichas"
               android:layout_width="wrap_content"

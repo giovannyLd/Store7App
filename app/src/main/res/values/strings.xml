@@ -23,6 +23,28 @@
     <string name="text_verduras">VEGETABLES</string>
     <string name="text_salsas">SAUCES</string>
     <string name="text_embu">COLD MEAT</string>
+    <string name="text_arroz">RICE LB = $</string>
+    <string name="text_avena">OATS LB = $</string>
+    <string name="text_lenteja">LENTIL LB = $</string>
+    <string name="text_maiz">CORN LB = $</string>
+    <string name="text_pan">BREAD UN = $</string>
+    <string name="text_pasta">SPAGHETTI LB = $</string>
+    <string name="text_trigo">WHEAT UN = $</string>
+    <string name="text_hamb">HAMBURGER UN = $</string>
+    <string name="text_jam">HAM LB = $</string>
+    <string name="text_mor">MORTADELLA LB = $</string>
+    <string name="text_salc">SAUSAGE LB = $</string>
+    <string name="text_form">QUESTIONNAIRE</string>
+    <string name="text_nom">Name *</string>
+    <string name="text_apell">Last Name *</string>
+    <string name="text_doc">Number Document *</string>
+    <string name="text_tel">Fixed/Cellphone Number *</string>
+    <string name="text_corr">Mail *</string>
+    <string name="text_cont">Password *</string>
+    <string name="text_contp">Confirm Password *</string>
+    <string name="text_atc">Accept terms and conditions *</string>
+    <string name="text_vtc">See terms and conditions *</string>
+    <string name="text_guardar">SAVE</string>
 
     <string-array name="cantidad">
         <item>0</item>

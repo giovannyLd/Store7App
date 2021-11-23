@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="Cereales"
-    android:background="@color/green_500"
+    android:background="@color/morado"
     android:layout_gravity="center">
 
     <ScrollView
@@ -55,7 +55,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:text="    ARROZ Lb= $ " />
+                    android:text="@string/text_arroz"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="15dp"/>
                 <TextView
                     android:id="@+id/valorArroz"
                     android:layout_width="wrap_content"
@@ -75,7 +77,9 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:scaleType="centerCrop"
-                    android:text="                      AVENA= $ " />
+                    android:text="@string/text_avena"
+                    android:layout_marginLeft="60dp"
+                    android:textSize="15dp"/>
                 <TextView
                     android:id="@+id/valorAvena"
                     android:layout_width="wrap_content"
@@ -193,7 +197,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:text="    LENTEJAS= $ " />
+                    android:text="@string/text_lenteja"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="15dp"/>
                 <TextView
                     android:id="@+id/valorLenteja"
                     android:layout_width="wrap_content"
@@ -212,7 +218,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:text="                     MAIZ U= $ " />
+                    android:text="@string/text_maiz"
+                    android:layout_marginLeft="60dp"
+                    android:textSize="15dp"/>
                 <TextView
                     android:id="@+id/valorMaiz"
                     android:layout_width="wrap_content"
@@ -327,7 +335,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:text="    PAN= $ " />
+                    android:text="@string/text_pan"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="15dp"/>
                 <TextView
                     android:id="@+id/valorPan"
                     android:layout_width="wrap_content"
@@ -346,7 +356,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:text="                       PASTA= $ " />
+                    android:text="@string/text_pasta"
+                    android:layout_marginLeft="50dp"
+                    android:textSize="15dp"/>
                 <TextView
                     android:id="@+id/valorPasta"
                     android:layout_width="wrap_content"
@@ -477,7 +489,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:text="                      TRIGO= $ " />
+                    android:text="@string/text_trigo"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="15dp"
+                    />
                 <TextView
                     android:id="@+id/valorTrigo"
                     android:layout_width="wrap_content"
