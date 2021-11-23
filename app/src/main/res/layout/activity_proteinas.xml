@@ -55,7 +55,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    ATUN Lb= $ " />
+                        android:text="@string/text_atun"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/valorAtun"
                         android:layout_width="wrap_content"
@@ -75,7 +78,9 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         android:scaleType="centerCrop"
-                        android:text="                      HUEVOS= $ " />
+                        android:text="@string/text_hv"
+                        android:layout_marginLeft="60dp"
+                        android:textSize="15dp" />
                     <TextView
                         android:id="@+id/valorHuevos"
                         android:layout_width="wrap_content"
@@ -193,7 +198,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    LECHES= $ " />
+                        android:text="@string/text_leche"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorLeche"
                         android:layout_width="wrap_content"
@@ -212,7 +219,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="                     MANTEQUILLA U= $ " />
+                        android:text="@string/text_mant"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorMantequilla"
                         android:layout_width="wrap_content"
@@ -327,7 +336,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    PESCADO= $ " />
+                        android:text="@string/text_pes"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorPescado"
                         android:layout_width="wrap_content"
@@ -346,7 +357,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="                       POLLO= $ " />
+                        android:text="@string/text_poll"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorPollo"
                         android:layout_width="wrap_content"
@@ -458,7 +471,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    QUESO= $ " />
+                        android:text="@string/text_queso"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorQueso"
                         android:layout_width="wrap_content"
@@ -477,7 +492,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="                      SARDINAS= $ " />
+                        android:text="@string/text_sard"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorSardinas"
                         android:layout_width="wrap_content"
@@ -559,7 +576,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:onClick="envioCarrito"
-                android:text="Cargar a Carrito"/>
+                android:text="@string/text_cargar"/>
 
         </LinearLayout>
 

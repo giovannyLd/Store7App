@@ -55,7 +55,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    AGUACATE Lb= $ " />
+                        android:text="@string/text_agu"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorAguacate"
                         android:layout_width="wrap_content"
@@ -75,7 +77,9 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         android:scaleType="centerCrop"
-                        android:text="                      ARVEJA= $ " />
+                        android:text="@string/text_arv"
+                        android:layout_marginLeft="60dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorArveja"
                         android:layout_width="wrap_content"
@@ -174,13 +178,13 @@
 
                     android:layout_width="150dp"
                     android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="right"
                     android:adjustViewBounds="true"
                     android:backgroundTint="#00FFFFFF"
-                    android:layout_gravity="right"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/brocoli"
-                    android:layout_column="1"
-                    android:layout_row="0"/>
+                    android:src="@drawable/brocoli" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -193,7 +197,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    BERENGENAS= $ " />
+                        android:text="@string/text_bere"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorBerengena"
                         android:layout_width="wrap_content"
@@ -212,7 +218,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="                     BROCOLI U= $ " />
+                        android:text="@string/text_bro"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorBrocoli"
                         android:layout_width="wrap_content"
@@ -327,7 +335,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    ESPINACA= $ " />
+                        android:text="@string/text_esp"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorEspinaca"
                         android:layout_width="wrap_content"
@@ -346,7 +356,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="                       GUATILA= $ " />
+                        android:text="                     GUATILA= $ " />
                     <TextView
                         android:id="@+id/valorGuatila"
                         android:layout_width="wrap_content"
@@ -458,7 +468,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    PIMENTON= $ " />
+                        android:text="@string/text_pime"
+                        android:layout_marginLeft="30dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorPimenton"
                         android:layout_width="wrap_content"
@@ -477,7 +489,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="                      TOMATE= $ " />
+                        android:text="@string/text_tom"
+                        android:layout_marginLeft="50dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorTomate"
                         android:layout_width="wrap_content"
@@ -559,7 +573,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:onClick="envioCarrito"
-                android:text="Cargar a Carrito"/>
+                android:text="@string/text_cargar"/>
 
         </LinearLayout>
 

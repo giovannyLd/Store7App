@@ -23,17 +23,17 @@
     <string name="text_verduras">VEGETABLES</string>
     <string name="text_salsas">SAUCES</string>
     <string name="text_embu">COLD MEAT</string>
-    <string name="text_arroz">RICE LB = $</string>
-    <string name="text_avena">OATS LB = $</string>
-    <string name="text_lenteja">LENTIL LB = $</string>
-    <string name="text_maiz">CORN LB = $</string>
-    <string name="text_pan">BREAD UN = $</string>
-    <string name="text_pasta">SPAGHETTI LB = $</string>
-    <string name="text_trigo">WHEAT UN = $</string>
-    <string name="text_hamb">HAMBURGER UN = $</string>
-    <string name="text_jam">HAM LB = $</string>
-    <string name="text_mor">MORTADELLA LB = $</string>
-    <string name="text_salc">SAUSAGE LB = $</string>
+    <string name="text_arroz">RICE Lb = $</string>
+    <string name="text_avena">OATS Lb = $</string>
+    <string name="text_lenteja">LENTIL Lb = $</string>
+    <string name="text_maiz">CORN Lb = $</string>
+    <string name="text_pan">BREAD Und = $</string>
+    <string name="text_pasta">SPAGHETTI Lb = $</string>
+    <string name="text_trigo">WHEAT Und = $</string>
+    <string name="text_hamb">HAMBURGER Und = $</string>
+    <string name="text_jam">HAM Lb = $</string>
+    <string name="text_mor">MORTADELLA Lb = $</string>
+    <string name="text_salc">SAUSAGE Lb = $</string>
     <string name="text_form">QUESTIONNAIRE</string>
     <string name="text_nom">Name *</string>
     <string name="text_apell">Last Name *</string>
@@ -45,6 +45,77 @@
     <string name="text_atc">Accept terms and conditions *</string>
     <string name="text_vtc">See terms and conditions *</string>
     <string name="text_guardar">SAVE</string>
+    <string name="text_aran">BLUEBERRY Lb = $</string>
+    <string name="text_ban">BANANA Lb = $</string>
+    <string name="text_cer">CHERRY Lb = $</string>
+    <string name="text_dur">PEACH Lb = $</string>
+    <string name="text_man">APPLE Lb = $</string>
+    <string name="text_san">WATERMELON Lb = $</string>
+    <string name="text_pin">PINEAPPLE Lb = $</string>
+    <string name="text_cargar">LOAD TO CART </string>
+    <string name="text_atun">TUNA Und = $ </string>
+    <string name="text_hv">EGG Und = $</string>
+    <string name="text_leche">MILK Und = $</string>
+    <string name="text_mant">BUTTER Und = $</string>
+    <string name="text_pes">FISH Lb = $</string>
+    <string name="text_poll">CHICKEN Lb = $</string>
+    <string name="text_queso">CHEESE Lb = $</string>
+    <string name="text_sard">SARDINE Lb = $</string>
+    <string name="text_most">MUSTARD = $ </string>
+    <string name="text_ajo">GARLIC = $ </string>
+    <string name="text_pic">SPICY = $ </string>
+    <string name="text_may">MAYONNAISE = $ </string>
+    <string name="text_sv">GREEN SAUCE = $ </string>
+    <string name="text_agu">AVOCADO Und = $ </string>
+    <string name="text_arv">PEA Lb = $ </string>
+    <string name="text_bere">EGGPLANT Und = $ </string>
+    <string name="text_bro">BROCCOLI Und = $ </string>
+    <string name="text_esp">SPINACH Und = $ </string>
+    <string name="text_pime">PAPRIKA Und = $ </string>
+    <string name="text_tom">TOMATO Und = $ </string>
+    <string name="text_tyc">TERMS AND CONDITIONS OF USE APP </string>
+    <string name="text_tycc">TERMS AND CONDITIONS OF APP USE The terms and conditions are an important agreement that must
+    be included on your website or app. It is not required by law, but it is important
+    count on them. It is the agreement that establishes the rules and guidelines for
+    its users.
+
+    With an agreement of terms and conditions, you will retain your rights to terminate access
+    to the website or application to the These Terms and Conditions of Use regulate the rules to which the use of the APP is subject
+    ____________________ (hereinafter, the APP), which can be downloaded from the domain
+    _______________________________ The download or use of the APP attributes the condition of
+    User to whom it does and implies acceptance of all the conditions included in this document
+    and in the Privacy Policy and Legal Notice of said website. The User should read these
+    conditions each time you use the APP, as they could be modified in the future.
+    2. Only Users expressly authorized by XXXEMPRESAXXX may access the
+    download and use the APP. Users who do not have authorization will not be able to access said
+    content.
+    3. Charges: You are responsible for paying all costs or expenses that you incur as a result of
+    download and use the XXXEMPRESAXXX Application, including any operator network charges or
+    roaming. Check with your service provider for details.
+    4. Anonymous statistics: XXXEMPRESAXXX reserves the right to track your
+    activity in the Application of and to inform our providers of statistical services of
+    third parties. All this anonymously.
+    5. Protection of your personal information: we want to help you carry out all the necessary steps
+    to protect your privacy and information. Consult the Privacy Policy of XXXEMPRESAXXX and the
+    notices about privacy of the Application to know what type of information we collect and the
+    measures we take to protect your personal information.
+    6. It is forbidden to alter or modify any part of the APP other than those contained therein, circumvent,
+    deactivate or otherwise manipulate (or try to circumvent, deactivate or manipulate) the
+    security functions or other functions of the program and use the APP or its contents for a purpose
+    commercial or advertising. The use of the APP for the purpose of damaging property is prohibited,
+    rights or interests of XXXEMPRESAXXX or third parties. It is also prohibited to carry out
+    any other use that alters, damages or disables the networks, servers, equipment, products and programs
+    computer science of XXXEMPRESAXXX or third parties.
+    7. The APP and its contents (texts, photographs, graphics, images, technology, software, links,
+    content, graphic design, source code, etc.), as well as trademarks and other distinctive signs are
+    owned by XXXEMPRESAXXX or third parties, the User not acquiring any right over them
+    by the mere use of the APP. The User must refrain from:
+    a) Reproduce, copy, distribute, make available to third parties, publicly communicate,
+    transform or modify the APP or its contents, except in the cases contemplated by law or
+    expressly authorized by XXXEMPRESAXXX or by the owner of said rights.
+    b) Reproduce or copy the APP or its contents for private use, as well as communicate them
+    publicly or make them available to third parties when this leads to their reproduction.
+    c) Extract or reuse all or a substantial part of the contents of the </string>
 
     <string-array name="cantidad">
         <item>0</item>

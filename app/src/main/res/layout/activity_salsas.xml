@@ -55,7 +55,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    FRUCO Lb= $ " />
+                        android:text="    FRUCO = $ "
+                        android:layout_marginLeft="40dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorFruco"
                         android:layout_width="wrap_content"
@@ -75,7 +77,9 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         android:scaleType="centerCrop"
-                        android:text="                      MOSTAZA= $ " />
+                        android:text="@string/text_most"
+                        android:layout_marginLeft="70dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorMostaza"
                         android:layout_width="wrap_content"
@@ -193,7 +197,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    AJOS= $ " />
+                        android:text="@string/text_ajo"
+                        android:layout_marginLeft="50dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorAjo"
                         android:layout_width="wrap_content"
@@ -212,7 +218,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="                     BECHAMEL U= $ " />
+                        android:text="                 BECHAMEL U= $ " />
                     <TextView
                         android:id="@+id/valorBechamel"
                         android:layout_width="wrap_content"
@@ -327,7 +333,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    PICANTE= $ " />
+                        android:text="@string/text_pic"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorPicante"
                         android:layout_width="wrap_content"
@@ -346,7 +354,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="                       TARTARA= $ " />
+                        android:text="                      TARTARA= $ " />
                     <TextView
                         android:id="@+id/valorTartara"
                         android:layout_width="wrap_content"
@@ -458,7 +466,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="    MAYONESA= $ " />
+                        android:text="@string/text_may"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorMayonesa"
                         android:layout_width="wrap_content"
@@ -477,7 +487,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="                      VERDE= $ " />
+                        android:text="@string/text_sv"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="15dp"/>
                     <TextView
                         android:id="@+id/valorSverde"
                         android:layout_width="wrap_content"
@@ -559,7 +571,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:onClick="envioCarrito"
-                android:text="Cargar a Carrito"/>
+                android:text="@string/text_cargar"/>
 
         </LinearLayout>
 

@@ -574,7 +574,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:onClick="envioCarrito"
-            android:text="Cargar a Carrito"/>
+            android:text="@string/text_cargar"/>
 
     </LinearLayout>
 
