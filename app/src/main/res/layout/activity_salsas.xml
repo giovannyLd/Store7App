@@ -17,145 +17,157 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:orientation="vertical">
 
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:useDefaultMargins="true"
-                >
-                <ImageButton
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/fruco"
-                    android:layout_column="0"
-                    android:layout_row="0"/>
+                android:useDefaultMargins="true">
 
                 <ImageButton
                     android:layout_width="150dp"
                     android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fruco" />
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="right"
                     android:adjustViewBounds="true"
                     android:backgroundTint="#00FFFFFF"
-                    android:layout_gravity="right"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/mostaza"
-                    android:layout_column="1"
-                    android:layout_row="0"/>
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/mostaza" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_row="1"
                     android:layout_column="0"
-                    android:layout_row="1">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/tvFruco"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="    FRUCO = $ "
                         android:layout_marginLeft="40dp"
-                        android:textSize="15dp"/>
+                        android:text="    FRUCO = $ "
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/valorFruco"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_row="1"
                     android:layout_column="1"
-                    android:layout_row="1">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/tvMostaza"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
+                        android:layout_marginLeft="70dp"
                         android:scaleType="centerCrop"
                         android:text="@string/text_most"
-                        android:layout_marginLeft="70dp"
-                        android:textSize="15dp"/>
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/valorMostaza"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_column="0"
                     android:layout_row="2"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center">
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
                     <Button
                         android:id="@+id/btnMenosFruco"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="-"
-                        android:textColor="@color/white"
                         android:gravity="center"
                         android:onClick="menosFruco"
-                        android:textSize="10dp"/>
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
 
                     <TextView
                         android:id="@+id/tvCanFruco"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:gravity="center"
                         android:text="0"
-                        android:textColor="@color/white"
-                        android:gravity="center" />
+                        android:textColor="@color/white" />
+
                     <Button
                         android:id="@+id/btnMasFruco"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="+"
                         android:gravity="center"
                         android:onClick="masFruco"
-                        android:textColor="@color/white"/>
+                        android:text="+"
+                        android:textColor="@color/white" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_column="1"
                     android:layout_row="2"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center">
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
                     <Button
                         android:id="@+id/btnMenosMostaza"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="-"
-                        android:onClick="menosMostaza"
-                        android:textColor="@color/white"
                         android:gravity="center"
-                        android:textSize="10dp"/>
+                        android:onClick="menosMostaza"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
 
                     <TextView
                         android:id="@+id/tvCanMostaza"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:gravity="center"
                         android:text="0"
-                        android:textColor="@color/white"
-                        android:gravity="center" />
+                        android:textColor="@color/white" />
+
                     <Button
                         android:id="@+id/btnMasMostaza"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="+"
-                        android:onClick="masMostaza"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:onClick="masMostaza"
+                        android:text="+"
+                        android:textColor="@color/white" />
 
 
                 </LinearLayout>
-
-
 
 
             </GridLayout>
@@ -172,7 +184,8 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/ajo"
                     android:layout_column="0"
-                    android:layout_row="0"/>
+                    android:layout_row="0"
+                    android:layout_marginTop="1dp"/>
 
                 <ImageButton
 
@@ -184,7 +197,9 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/bechamel"
                     android:layout_column="1"
-                    android:layout_row="0"/>
+                    android:layout_row="0"
+                    android:layout_marginTop="1dp"
+                    />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -320,7 +335,8 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/tartara"
                     android:layout_column="1"
-                    android:layout_row="0"/>
+                    android:layout_row="0"
+                    android:layout_marginTop="1dp"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -433,143 +449,183 @@
 
             <GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="240dp"
                 android:useDefaultMargins="true">
-                <ImageButton
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/mayonesa"
-                    android:layout_column="0"
-                    android:layout_row="0"/>
 
                 <ImageButton
                     android:layout_width="150dp"
                     android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mayonesa" />
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="right"
                     android:adjustViewBounds="true"
                     android:backgroundTint="#00FFFFFF"
-                    android:layout_gravity="right"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/sverde"
-                    android:layout_column="1"
-                    android:layout_row="0"/>
+                    android:src="@drawable/sverde" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_row="1"
                     android:layout_column="0"
-                    android:layout_row="1">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/tvMayonesa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/text_may"
                         android:layout_marginLeft="40dp"
-                        android:textSize="15dp"/>
+                        android:text="@string/text_may"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/valorMayonesa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_row="1"
                     android:layout_column="1"
-                    android:layout_row="1">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/tvSverde"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/text_sv"
                         android:layout_marginLeft="40dp"
-                        android:textSize="15dp"/>
+                        android:text="@string/text_sv"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/valorSverde"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_column="0"
                     android:layout_row="2"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center">
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
                     <Button
                         android:id="@+id/btnMenosMayonesa"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="-"
-                        android:onClick="menosMayonesa"
-                        android:textColor="@color/white"
                         android:gravity="center"
-                        android:textSize="10dp"/>
+                        android:onClick="menosMayonesa"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
 
                     <TextView
                         android:id="@+id/tvCanMayonesa"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:gravity="center"
                         android:text="0"
-                        android:textColor="@color/white"
-                        android:gravity="center" />
+                        android:textColor="@color/white" />
+
                     <Button
                         android:id="@+id/btnMasMayonesa"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="+"
-                        android:onClick="masMayonesa"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:onClick="masMayonesa"
+                        android:text="+"
+                        android:textColor="@color/white" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_column="1"
                     android:layout_row="2"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center">
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
                     <Button
                         android:id="@+id/btnMenosSverde"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="-"
-                        android:onClick="menosSverde"
-                        android:textColor="@color/white"
                         android:gravity="center"
-                        android:textSize="10dp"/>
+                        android:onClick="menosSverde"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
 
                     <TextView
                         android:id="@+id/tvCanSverde"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:gravity="center"
                         android:text="0"
-                        android:textColor="@color/white"
-                        android:gravity="center" />
+                        android:textColor="@color/white" />
+
                     <Button
                         android:id="@+id/btnMasSverde"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="+"
-                        android:onClick="masSverde"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:onClick="masSverde"
+                        android:text="+"
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
+                <com.getbase.floatingactionbutton.FloatingActionsMenu
+                    android:id="@+id/principal"
+                    android:layout_width="26dp"
+                    android:layout_height="116dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="bottom|center_vertical"
+                    android:accessibilityLiveRegion="polite"
+                    android:fadeScrollbars="true"
+                    app:fab_addButtonColorNormal="@color/pink"
+                    app:fab_addButtonColorPressed="@color/purple_500"
+                    app:fab_size="mini">
+
+                    <com.getbase.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/Ircarrito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:fab_addButtonColorNormal="@color/pink"
+                        app:fab_addButtonColorPressed="@color/purple_500"
+                        app:fab_icon="@mipmap/app2"
+                        app:fab_size="mini">
+
+                    </com.getbase.floatingactionbutton.FloatingActionButton>
+
+
+                </com.getbase.floatingactionbutton.FloatingActionsMenu>
             </GridLayout>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:gravity="left"
                 android:onClick="envioCarrito"
                 android:text="@string/text_cargar"/>
 

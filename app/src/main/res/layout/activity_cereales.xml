@@ -18,6 +18,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_margin="20dp"
+        android:layout_weight="3"
         android:orientation="vertical">
 
         <GridLayout
@@ -25,25 +26,31 @@
             android:layout_height="wrap_content"
             android:useDefaultMargins="true"
             >
-            <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
-                android:src="@drawable/arroz"
-                android:layout_column="0"
-                android:layout_row="0"/>
 
             <ImageButton
                 android:layout_width="150dp"
                 android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_weight="3"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/arroz" />
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="right"
                 android:adjustViewBounds="true"
                 android:backgroundTint="#00FFFFFF"
-                android:layout_gravity="right"
                 android:scaleType="centerCrop"
                 android:src="@drawable/avena"
-                android:layout_column="1"
-                android:layout_row="0"/>
+                android:layout_marginTop="5dp"
+                android:layout_weight="3"/>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -156,8 +163,6 @@
             </LinearLayout>
 
 
-
-
         </GridLayout>
 
         <GridLayout
@@ -172,19 +177,21 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/lenteja"
                 android:layout_column="0"
-                android:layout_row="0"/>
+                android:layout_row="0"
+                android:layout_marginTop="5dp"/>
 
             <ImageButton
 
                 android:layout_width="150dp"
                 android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="right"
                 android:adjustViewBounds="true"
                 android:backgroundTint="#00FFFFFF"
-                android:layout_gravity="right"
                 android:scaleType="centerCrop"
                 android:src="@drawable/maiz"
-                android:layout_column="1"
-                android:layout_row="0"/>
+                android:layout_marginTop="5dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -311,18 +318,20 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/pan"
                 android:layout_column="0"
-                android:layout_row="0"/>
+                android:layout_row="0"
+                android:layout_marginTop="5dp"/>
 
             <ImageButton
                 android:layout_width="150dp"
                 android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="right"
                 android:adjustViewBounds="true"
                 android:backgroundTint="#00FFFFFF"
-                android:layout_gravity="right"
                 android:scaleType="centerCrop"
                 android:src="@drawable/pasta"
-                android:layout_column="1"
-                android:layout_row="0"/>
+                android:layout_marginTop="5dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -437,146 +446,198 @@
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="190dp"
             android:useDefaultMargins="true">
-            <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:backgroundTint="#00FFFFFF"
-                android:scaleType="centerCrop"
-                android:src="@drawable/quinoa"
-                android:layout_column="0"
-                android:layout_row="0"/>
 
             <ImageButton
                 android:layout_width="150dp"
                 android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@drawable/quinoa" />
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
                 android:adjustViewBounds="true"
                 android:backgroundTint="#00FFFFFF"
-                android:layout_gravity="right"
                 android:scaleType="centerCrop"
-                android:src="@drawable/trigo"
-                android:layout_column="1"
-                android:layout_row="0"/>
+                android:src="@drawable/trigo" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_row="1"
                 android:layout_column="0"
-                android:layout_row="1">
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/tvQuinoa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="    QUINOA= $ " />
+                    android:text="    QUINOA= $ "
+                    android:textColor="@color/white" />
+
                 <TextView
                     android:id="@+id/valorQuinoa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_row="1"
                 android:layout_column="1"
-                android:layout_row="1">
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/tvTrigo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:text="@string/text_trigo"
                     android:layout_marginLeft="40dp"
-                    android:textSize="15dp"
-                    />
+                    android:text="@string/text_trigo"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
                 <TextView
                     android:id="@+id/valorTrigo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_column="0"
                 android:layout_row="2"
-                android:gravity="center_vertical"
-                android:layout_gravity="center">
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:gravity="center_vertical">
+
                 <Button
                     android:id="@+id/btnMenosQuinoa"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:text="-"
-                    android:onClick="menosQuinoa"
-                    android:textColor="@color/white"
                     android:gravity="center"
-                    android:textSize="10dp"/>
+                    android:onClick="menosQuinoa"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
 
                 <TextView
                     android:id="@+id/tvCanQuinoa"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:gravity="center"
                     android:text="0"
-                    android:textColor="@color/white"
-                    android:gravity="center" />
+                    android:textColor="@color/white" />
+
                 <Button
                     android:id="@+id/btnMasQuinoa"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:text="+"
-                    android:onClick="masQuinoa"
                     android:gravity="center"
-                    android:textColor="@color/white"/>
+                    android:onClick="masQuinoa"
+                    android:text="+"
+                    android:textColor="@color/white" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_column="1"
                 android:layout_row="2"
-                android:gravity="center_vertical"
-                android:layout_gravity="center">
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:gravity="center_vertical">
+
                 <Button
                     android:id="@+id/btnMenosTrigo"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:text="-"
-                    android:onClick="menosTrigo"
-                    android:textColor="@color/white"
                     android:gravity="center"
-                    android:textSize="10dp"/>
+                    android:onClick="menosTrigo"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
 
                 <TextView
                     android:id="@+id/tvCanTrigo"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:gravity="center"
                     android:text="0"
-                    android:textColor="@color/white"
-                    android:gravity="center" />
+                    android:textColor="@color/white" />
+
                 <Button
                     android:id="@+id/btnMasTrigo"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:text="+"
-                    android:onClick="masTrigo"
                     android:gravity="center"
-                    android:textColor="@color/white"/>
+                    android:onClick="masTrigo"
+                    android:text="+"
+                    android:textColor="@color/white" />
+
             </LinearLayout>
+
+            <com.getbase.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/principal"
+                android:layout_width="26dp"
+                android:layout_height="116dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="-8dp"
+                android:accessibilityLiveRegion="polite"
+                android:fadeScrollbars="true"
+                app:fab_addButtonColorNormal="@color/pink"
+                app:fab_addButtonColorPressed="@color/purple_500"
+                app:fab_addButtonSize="normal"
+                app:fab_addButtonStrokeVisible="false"
+                app:fab_expandDirection="up"
+                app:fab_labelsPosition="right"
+                app:fab_size="mini">
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/Ircarrito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_addButtonColorNormal="@color/pink"
+                    app:fab_addButtonColorPressed="@color/purple_500"
+                    app:fab_icon="@mipmap/app2"
+                    app:fab_size="mini">
+
+                </com.getbase.floatingactionbutton.FloatingActionButton>
+
+
+            </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
         </GridLayout>
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="260dp"
+            android:layout_height="38dp"
             android:gravity="center"
             android:onClick="envioCarrito"
-            android:text="@string/text_cargar"/>
+            android:text="@string/text_cargar" />
 
     </LinearLayout>
 
+
+
     </ScrollView>
+
 </LinearLayout>
+
+

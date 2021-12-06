@@ -13,6 +13,9 @@
     <string name="title_activity_frutas">Frutas</string>
     <string name="hint_password">Your password</string>
     <string name="hint_username">Username</string>
+    <string name="test_search">Search</string>
+    <string name="test_costo">Costo</string>
+    <string name="test_Category">Categoria</string>
     <string name="text_start">Section Start</string>
     <string name="text_register">Check in</string>
     <string name="text_login">Log in</string>
@@ -126,4 +129,8 @@
         <item>5</item>
 
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+<!--    <string name="test_All" />-->
+<!--    <string name="test_All" />-->
 </resources>

@@ -13,6 +13,9 @@
     <string name="title_activity_frutas">Frutas</string>
     <string name="hint_password">Tu password</string>
     <string name="hint_username">Nombre</string>
+    <string name="test_search">Search</string>
+    <string name="test_Category">Category</string>
+    <string name="test_costo">Costo</string>
     <string name="text_start">Inicio Seccion</string>
     <string name="text_register">Registrarse</string>
     <string name="text_login">Ingresar</string>

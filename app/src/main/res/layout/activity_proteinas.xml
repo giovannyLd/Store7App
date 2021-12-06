@@ -23,140 +23,155 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:useDefaultMargins="true"
-                >
-                <ImageButton
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/atun"
-                    android:layout_column="0"
-                    android:layout_row="0"/>
+                android:useDefaultMargins="true">
 
                 <ImageButton
                     android:layout_width="150dp"
                     android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/atun"
+                    android:layout_marginTop="90dp"/>
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="right"
                     android:adjustViewBounds="true"
                     android:backgroundTint="#00FFFFFF"
-                    android:layout_gravity="right"
                     android:scaleType="centerCrop"
                     android:src="@drawable/huevos"
-                    android:layout_column="1"
-                    android:layout_row="0"/>
+                    android:layout_marginTop="90dp"/>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_row="1"
                     android:layout_column="0"
-                    android:layout_row="1">
-                    <TextView
-                        android:id="@+id/tvAtun"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/text_atun"
-                        android:layout_marginLeft="30dp"
-                        android:textSize="15dp" />
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/valorAtun"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_row="1"
                     android:layout_column="1"
-                    android:layout_row="1">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/tvHuevos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
+                        android:layout_marginLeft="60dp"
                         android:scaleType="centerCrop"
                         android:text="@string/text_hv"
-                        android:layout_marginLeft="60dp"
+                        android:textColor="@color/white"
                         android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/valorHuevos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_column="0"
                     android:layout_row="2"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center">
-                    <Button
-                        android:id="@+id/btnMenosAtun"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:text="-"
-                        android:textColor="@color/white"
-                        android:gravity="center"
-                        android:onClick="menosAtun"
-                        android:textSize="10dp"/>
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
 
                     <TextView
                         android:id="@+id/tvCanAtun"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:gravity="center"
                         android:text="0"
-                        android:textColor="@color/white"
-                        android:gravity="center" />
+                        android:textColor="@color/white" />
+
                     <Button
                         android:id="@+id/btnMasAtun"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="+"
                         android:gravity="center"
                         android:onClick="masAtun"
-                        android:textColor="@color/white"/>
+                        android:text="+"
+                        android:textColor="@color/white" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_column="1"
                     android:layout_row="2"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center">
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
                     <Button
                         android:id="@+id/btnMenosHuevos"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="-"
-                        android:onClick="menosHuevos"
-                        android:textColor="@color/white"
                         android:gravity="center"
-                        android:textSize="10dp"/>
+                        android:onClick="menosHuevos"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
 
                     <TextView
                         android:id="@+id/tvCanHuevos"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:gravity="center"
                         android:text="0"
-                        android:textColor="@color/white"
-                        android:gravity="center" />
+                        android:textColor="@color/white" />
+
                     <Button
                         android:id="@+id/btnMasHuevos"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="+"
-                        android:onClick="masHuevos"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:onClick="masHuevos"
+                        android:text="+"
+                        android:textColor="@color/white" />
 
 
                 </LinearLayout>
 
+                <TextView
+                    android:id="@+id/tvAtun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/text_atun"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
 
+                <Button
+                    android:id="@+id/btnMenosAtun"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:gravity="center"
+                    android:onClick="menosAtun"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
 
 
             </GridLayout>
@@ -165,136 +180,147 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:useDefaultMargins="true">
+
                 <ImageButton
 
                     android:layout_width="150dp"
                     android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
                     android:backgroundTint="#00FFFFFF"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/leche"
-                    android:layout_column="0"
-                    android:layout_row="0"/>
+                    android:src="@drawable/leche" />
 
                 <ImageButton
 
                     android:layout_width="150dp"
                     android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="right"
                     android:adjustViewBounds="true"
                     android:backgroundTint="#00FFFFFF"
-                    android:layout_gravity="right"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/mantequilla"
-                    android:layout_column="1"
-                    android:layout_row="0"/>
+                    android:src="@drawable/mantequilla" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_row="1"
                     android:layout_column="0"
-                    android:layout_row="1">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/tvLeche"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/text_leche"
                         android:layout_marginLeft="30dp"
-                        android:textSize="15dp"/>
+                        android:text="@string/text_leche"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/valorLeche"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_row="1"
                     android:layout_column="1"
-                    android:layout_row="1">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/tvMantequilla"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/text_mant"
                         android:layout_marginLeft="30dp"
-                        android:textSize="15dp"/>
+                        android:text="@string/text_mant"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/valorMantequilla"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_column="0"
                     android:layout_row="2"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center">
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
                     <Button
                         android:id="@+id/btnMenosLeche"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="-"
-                        android:onClick="menosLeche"
-                        android:textColor="@color/white"
                         android:gravity="center"
-                        android:textSize="10dp"/>
+                        android:onClick="menosLeche"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
 
                     <TextView
                         android:id="@+id/tvCanLeche"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:gravity="center"
                         android:text="0"
-                        android:textColor="@color/white"
-                        android:gravity="center" />
+                        android:textColor="@color/white" />
+
                     <Button
                         android:id="@+id/btnMasLeche"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="+"
-                        android:onClick="masLeche"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:onClick="masLeche"
+                        android:text="+"
+                        android:textColor="@color/white" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_column="1"
                     android:layout_row="2"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center">
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
                     <Button
                         android:id="@+id/btnMenosMantequilla"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="-"
-                        android:onClick="menosMantequilla"
-                        android:textColor="@color/white"
                         android:gravity="center"
-                        android:textSize="10dp"/>
+                        android:onClick="menosMantequilla"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
 
                     <TextView
                         android:id="@+id/tvCanMantequilla"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:gravity="center"
                         android:text="0"
-                        android:textColor="@color/white"
-                        android:gravity="center" />
+                        android:textColor="@color/white" />
+
                     <Button
                         android:id="@+id/btnMasMantequilla"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="+"
-                        android:onClick="masMantequilla"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:onClick="masMantequilla"
+                        android:text="+"
+                        android:textColor="@color/white" />
 
 
                 </LinearLayout>
@@ -305,133 +331,145 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:useDefaultMargins="true">
-                <ImageButton
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pescado"
-                    android:layout_column="0"
-                    android:layout_row="0"/>
 
                 <ImageButton
                     android:layout_width="150dp"
                     android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pescado" />
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="right"
                     android:adjustViewBounds="true"
                     android:backgroundTint="#00FFFFFF"
-                    android:layout_gravity="right"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/pollo"
-                    android:layout_column="1"
-                    android:layout_row="0"/>
+                    android:src="@drawable/pollo" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_row="1"
                     android:layout_column="0"
-                    android:layout_row="1">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/tvPescado"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/text_pes"
                         android:layout_marginLeft="30dp"
-                        android:textSize="15dp"/>
+                        android:text="@string/text_pes"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/valorPescado"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_row="1"
                     android:layout_column="1"
-                    android:layout_row="1">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/tvPollo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/text_poll"
                         android:layout_marginLeft="40dp"
-                        android:textSize="15dp"/>
+                        android:text="@string/text_poll"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/valorPollo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_column="0"
                     android:layout_row="2"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center">
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
                     <Button
                         android:id="@+id/btnMenosPescado"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="-"
-                        android:onClick="menosPescado"
-                        android:textColor="@color/white"
                         android:gravity="center"
-                        android:textSize="10dp"/>
+                        android:onClick="menosPescado"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
 
                     <TextView
                         android:id="@+id/tvCanPescado"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:gravity="center"
                         android:text="0"
-                        android:textColor="@color/white"
-                        android:gravity="center" />
+                        android:textColor="@color/white" />
+
                     <Button
                         android:id="@+id/btnMasPescado"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="+"
-                        android:onClick="masPescado"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:onClick="masPescado"
+                        android:text="+"
+                        android:textColor="@color/white" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_column="1"
                     android:layout_row="2"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center">
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
                     <Button
                         android:id="@+id/btnMenosPollo"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="-"
-                        android:onClick="menosPollo"
-                        android:textColor="@color/white"
                         android:gravity="center"
-                        android:textSize="10dp"/>
+                        android:onClick="menosPollo"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
 
                     <TextView
                         android:id="@+id/tvCanPollo"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:gravity="center"
                         android:text="0"
-                        android:textColor="@color/white"
-                        android:gravity="center" />
+                        android:textColor="@color/white" />
+
                     <Button
                         android:id="@+id/btnMasPollo"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="+"
-                        android:onClick="masPollo"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:onClick="masPollo"
+                        android:text="+"
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
             </GridLayout>
@@ -440,135 +478,175 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:useDefaultMargins="true">
-                <ImageButton
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:backgroundTint="#00FFFFFF"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/queso"
-                    android:layout_column="0"
-                    android:layout_row="0"/>
 
                 <ImageButton
                     android:layout_width="150dp"
                     android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/queso" />
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="right"
                     android:adjustViewBounds="true"
                     android:backgroundTint="#00FFFFFF"
-                    android:layout_gravity="right"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/sardinas"
-                    android:layout_column="1"
-                    android:layout_row="0"/>
+                    android:src="@drawable/sardinas" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_row="1"
                     android:layout_column="0"
-                    android:layout_row="1">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/tvQueso"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/text_queso"
                         android:layout_marginLeft="40dp"
-                        android:textSize="15dp"/>
+                        android:text="@string/text_queso"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/valorQueso"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:layout_row="1"
                     android:layout_column="1"
-                    android:layout_row="1">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/tvSardinas"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="@string/text_sard"
                         android:layout_marginLeft="40dp"
-                        android:textSize="15dp"/>
+                        android:text="@string/text_sard"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/valorSardinas"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_column="0"
                     android:layout_row="2"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center">
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
                     <Button
                         android:id="@+id/btnMenosQueso"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="-"
-                        android:onClick="menosQueso"
-                        android:textColor="@color/white"
                         android:gravity="center"
-                        android:textSize="10dp"/>
+                        android:onClick="menosQueso"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
 
                     <TextView
                         android:id="@+id/tvCanQueso"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:gravity="center"
                         android:text="0"
-                        android:textColor="@color/white"
-                        android:gravity="center" />
+                        android:textColor="@color/white" />
+
                     <Button
                         android:id="@+id/btnMasQueso"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="+"
-                        android:onClick="masQueso"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:onClick="masQueso"
+                        android:text="+"
+                        android:textColor="@color/white" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_column="1"
                     android:layout_row="2"
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center">
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical">
+
                     <Button
                         android:id="@+id/btnMenosSardinas"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="-"
-                        android:onClick="menosSardinas"
-                        android:textColor="@color/white"
                         android:gravity="center"
-                        android:textSize="10dp"/>
+                        android:onClick="menosSardinas"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
 
                     <TextView
                         android:id="@+id/tvCanSardinas"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:gravity="center"
                         android:text="0"
-                        android:textColor="@color/white"
-                        android:gravity="center" />
+                        android:textColor="@color/white" />
+
                     <Button
                         android:id="@+id/btnMasSardinas"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:text="+"
-                        android:onClick="masSardinas"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:onClick="masSardinas"
+                        android:text="+"
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
+                <com.getbase.floatingactionbutton.FloatingActionsMenu
+                    android:id="@+id/principal"
+                    android:layout_width="26dp"
+                    android:layout_height="116dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="bottom|center_vertical"
+                    android:accessibilityLiveRegion="polite"
+                    android:fadeScrollbars="true"
+                    app:fab_addButtonColorNormal="@color/pink"
+                    app:fab_addButtonColorPressed="@color/purple_500"
+                    app:fab_size="mini">
+
+                    <com.getbase.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/Ircarrito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:fab_addButtonColorNormal="@color/pink"
+                        app:fab_addButtonColorPressed="@color/purple_500"
+                        app:fab_icon="@mipmap/app2"
+                        app:fab_size="mini">
+
+                    </com.getbase.floatingactionbutton.FloatingActionButton>
+
+
+                </com.getbase.floatingactionbutton.FloatingActionsMenu>
             </GridLayout>
 
             <Button
@@ -576,7 +654,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:onClick="envioCarrito"
-                android:text="@string/text_cargar"/>
+                android:text="@string/text_cargar" />
 
         </LinearLayout>
 
