@@ -291,14 +291,39 @@ class Salsas : AppCompatActivity() {
         var sverde: String = valorSverde!!.text.toString()
 
 
+        var frucoCan: Int = tvCanFruco!!.text.toString().toInt()
+        var mostazaCan: Int = tvCanMostaza!!.text.toString().toInt()
+        var ajoCan: Int = tvCanAjo!!.text.toString().toInt()
+        var bechamelCan: Int = tvCanBechamel!!.text.toString().toInt()
+        var picanteCan: Int = tvCanPicante!!.text.toString().toInt()
+        var tartaraCan: Int = tvCanTartara!!.text.toString().toInt()
+        var mayonesaCan: Int = tvCanMayonesa!!.text.toString().toInt()
+        var sVerdeCan: Int = tvCanSverde!!.text.toString().toInt()
+
+
         Toast.makeText(
             this,
-            "Fruco = $ " + fruco + "\nMostaza = $ " + mostaza + "\nAjos = $ " + ajo +
+            "SE HA CARGADO AL CARRITO DE MERCADO LO SIGUIENTE :  \n Fruco = $ " + fruco + "\nMostaza = $ " + mostaza + "\nAjos = $ " + ajo +
                     "\nBechamel = $ " + bechamel + "\nPicante = $ " + picante + "\nTartara = $ " + tartara + "\nMayonesa = $ " + mayonesa +
                     "\nSverde = $ " + sverde,
             Toast.LENGTH_LONG
         ).show()
-        var intentCarrito = Intent(this, Pruebas::class.java)
+        val cargueCarrito = CarroMercado(
+            "Salsas",
+            "fruco",
+            "mostaza",
+            "ajo",
+            "bechamel",
+            "picante",
+            "tartara",
+            "mayonesa",
+            "sverde",
+        fruco,mostaza,ajo,bechamel,picante,tartara,mayonesa,sverde,frucoCan,mostazaCan,ajoCan,bechamelCan,picanteCan,tartaraCan,mayonesaCan,sVerdeCan)
+
+       cargueCarrito.cargar()
+        //cargueCarrito.cargarPrueba()
+
+      /*  var intentCarrito = Intent(this, Pruebas::class.java)
 
         intentCarrito.putExtra("categoria","Salsas")
         intentCarrito.putExtra("producto1","fruco")
@@ -317,7 +342,7 @@ class Salsas : AppCompatActivity() {
         intentCarrito.putExtra("valor6",tartara)
         intentCarrito.putExtra("valor7",mayonesa)
         intentCarrito.putExtra("valor8",sverde)
-        startActivity(intentCarrito)
+        startActivity(intentCarrito)*/
 
 
 

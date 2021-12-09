@@ -290,18 +290,44 @@ class Verduras : AppCompatActivity() {
         var pimenton: String = valorPimenton!!.text.toString()
         var tomate: String = valorTomate!!.text.toString()
 
+        var aguacateCan: Int = tvCanAguacate!!.text.toString().toInt()
+        var arvejaCan: Int = tvCanArveja!!.text.toString().toInt()
+        var berengenaCan: Int = tvCanBerengena!!.text.toString().toInt()
+        var brocoliCan: Int = tvCanBrocoli!!.text.toString().toInt()
+        var espinacaCan: Int = tvCanEspinaca!!.text.toString().toInt()
+        var guatilaCan: Int = tvCanGuatila!!.text.toString().toInt()
+        var pimentonCan: Int = tvCanPimenton!!.text.toString().toInt()
+        var tomateCan: Int = tvCanTomate!!.text.toString().toInt()
+
 
         Toast.makeText(
             this,
-            "Aguacate = $ " + aguacate + "\nArveja = $ " + arveja + "\nBerengenas = $ " + berengena +
+            "SE HA CARGADO AL CARRITO DE MERCADO LO SIGUIENTE :  \n Aguacate = $ " + aguacate + "\nArveja = $ " + arveja + "\nBerengenas = $ " + berengena +
                     "\nBrocoli = $ " + brocoli + "\nEspinaca = $ " + espinaca + "\nGuatila = $ " + guatila + "\nPimenton = $ " + pimenton +
                     "\nTomate = $ " + tomate,
             Toast.LENGTH_LONG
         ).show()
-        var intentCarrito = Intent(this, Pruebas::class.java)
+
+        val cargueCarrito = CarroMercado(
+            "Verduras",
+            "aguacate",
+            "arveja",
+            "berengena",
+            "brocoli",
+            "espinaca",
+            "guatila",
+            "pimenton",
+            "tomate",
+        aguacate,arveja,berengena,brocoli,espinaca,guatila,pimenton,tomate,
+            aguacateCan,arvejaCan,berengenaCan,brocoliCan,espinacaCan,guatilaCan,pimentonCan,tomateCan)
+
+       cargueCarrito.cargar()
+       // cargueCarrito.cargarPrueba()
+
+     /*   var intentCarrito = Intent(this, Pruebas::class.java)
 
         intentCarrito.putExtra("categoria","Verduras")
-        intentCarrito.putExtra("producto1","aguacate")
+        intentCarrito.putExtra("producto1","baguacate")
         intentCarrito.putExtra("producto2","arveja")
         intentCarrito.putExtra("producto3","berengena")
         intentCarrito.putExtra("producto4","brocoli")
@@ -317,7 +343,7 @@ class Verduras : AppCompatActivity() {
         intentCarrito.putExtra("valor6",guatila)
         intentCarrito.putExtra("valor7",pimenton)
         intentCarrito.putExtra("valor8",tomate)
-        startActivity(intentCarrito)
+        startActivity(intentCarrito)*/
 
     }
 }

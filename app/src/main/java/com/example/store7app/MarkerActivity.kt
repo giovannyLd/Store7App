@@ -3,10 +3,16 @@ package com.example.store7app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageButton
 import android.widget.Toast
+import com.google.firebase.firestore.FirebaseFirestore
 
 class MarkerActivity : AppCompatActivity() {
+
+
+    var db = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_marker)
@@ -48,6 +54,27 @@ class MarkerActivity : AppCompatActivity() {
             startActivity(marker)
         }
 
-        }}
+        }
+
+    fun btnCarro(view: android.view.View) {
+
+
+        /*var intentCarrito = Intent(this, VerCarroMercado::class.java)
+        startActivity(intentCarrito)*/
+
+
+        Toast.makeText(getApplicationContext(),"btncarro",Toast.LENGTH_LONG).show()
+
+    }
+
+    fun btnCarro1(view: android.view.View) {
+        Toast.makeText(getApplicationContext(),"btncarro1",Toast.LENGTH_LONG).show()
+
+        val marker = Intent(this, VerCarroMercado::class.java)
+        startActivity(marker)
+
+
+    }
+}
 
 

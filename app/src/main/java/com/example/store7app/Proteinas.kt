@@ -1,13 +1,10 @@
 package com.example.store7app
 
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.*
 //import com.google.firebase.firestore.FirebaseFirestore
-import java.util.*
 
 
 class Proteinas : AppCompatActivity() {
@@ -291,33 +288,70 @@ class Proteinas : AppCompatActivity() {
         var sardinas: String = valorSardinas!!.text.toString()
 
 
+        var atunCan: Int = tvCanAtun!!.text.toString().toInt()
+        var huevosCan: Int = tvCanHuevos!!.text.toString().toInt()
+        var lecheCan: Int = tvCanLeche!!.text.toString().toInt()
+        var mantequillaCan: Int = tvCanMantequilla!!.text.toString().toInt()
+        var pescadoCan: Int = tvCanPescado!!.text.toString().toInt()
+        var polloCan: Int = tvCanPollo!!.text.toString().toInt()
+        var quesoCan: Int = tvCanQueso!!.text.toString().toInt()
+        var sardinasCan: Int = tvCanSardinas!!.text.toString().toInt()
+
+
+
+
         Toast.makeText(
             this,
-            "Atun = $ " + atun + "\nHuevos = $ " + huevos + "\nLeches = $ " + leche +
+            "SE HA CARGADO AL CARRITO DE MERCADO LO SIGUIENTE :  \n Atun = $ " + atun + "\nHuevos = $ " + huevos + "\nLeches = $ " + leche +
                     "\nMantequilla = $ " + mantequilla + "\nPescado = $ " + pescado + "\nPollo = $ " + pollo + "\nQueso = $ " + queso +
                     "\nSardinas = $ " + sardinas,
             Toast.LENGTH_LONG
         ).show()
-        var intentCarrito = Intent(this, Pruebas::class.java)
 
-        intentCarrito.putExtra("categoria","Proteinas")
-        intentCarrito.putExtra("producto1","atun")
-        intentCarrito.putExtra("producto2","huevos")
-        intentCarrito.putExtra("producto3","leche")
-        intentCarrito.putExtra("producto4","mantequilla")
-        intentCarrito.putExtra("producto5","pescado")
-        intentCarrito.putExtra("producto6","pollo")
-        intentCarrito.putExtra("producto7","queso")
-        intentCarrito.putExtra("producto8","sardina")
+
+        val cargueCarrito = CarroMercado(
+            "Proteinas",
+            "atun",
+            "huevos",
+            "leche",
+            "mantequilla",
+            "pescado",
+            "pollo",
+            "queso",
+            "sardina",
+            atun,
+            huevos,
+            leche,
+            mantequilla,
+            pescado,
+            pollo,
+            queso,
+            sardinas,atunCan,huevosCan,lecheCan,mantequillaCan,pescadoCan,polloCan,quesoCan
+        ,sardinasCan)
+
+       cargueCarrito.cargar()
+       // cargueCarrito.cargarPrueba()
+
+     /* var intentCarrito = Intent(this, Pruebas::class.java)
+
+        intentCarrito.putExtra("categoria", "Proteinas")
+        intentCarrito.putExtra("producto1", "atun")
+        intentCarrito.putExtra("producto2", "huevos")
+        intentCarrito.putExtra("producto3", "leche")
+        intentCarrito.putExtra("producto4", "mantequilla")
+        intentCarrito.putExtra("producto5", "pescado")
+        intentCarrito.putExtra("producto6", "pollo")
+        intentCarrito.putExtra("producto7", "queso")
+        intentCarrito.putExtra("producto8", "sardina")
         intentCarrito.putExtra("valor1", atun)
         intentCarrito.putExtra("valor2", huevos)
-        intentCarrito.putExtra("valor3",leche)
-        intentCarrito.putExtra("valor4",mantequilla)
-        intentCarrito.putExtra("valor5",pescado)
-        intentCarrito.putExtra("valor6",pollo)
-        intentCarrito.putExtra("valor7",queso)
-        intentCarrito.putExtra("valor8",sardinas)
-        startActivity(intentCarrito)
+        intentCarrito.putExtra("valor3", leche)
+        intentCarrito.putExtra("valor4", mantequilla)
+        intentCarrito.putExtra("valor5", pescado)
+        intentCarrito.putExtra("valor6", pollo)
+        intentCarrito.putExtra("valor7", queso)
+        intentCarrito.putExtra("valor8", sardinas)
+        startActivity(intentCarrito)*/
 
 
     }

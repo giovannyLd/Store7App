@@ -60,4 +60,15 @@ dependencies {
     implementation 'com.getbase:floatingactionbutton:1.10.1'
 
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation'androidx.recyclerview:recyclerview:1.2.1'
+
+
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+
+    implementation 'com.sun.mail:android-mail:1.5.5'
+    implementation 'com.sun.mail:android-activation:1.5.5'
+
+
+
+
 }

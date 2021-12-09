@@ -1,11 +1,15 @@
 package com.example.store7app
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
+import com.google.firebase.firestore.FirebaseFirestore
 //import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
 
@@ -60,7 +64,7 @@ class Cereales : AppCompatActivity() {
     protected var tvCanTrigo: TextView? = null
     protected var btnMasTrigo: Button? = null
     protected var valorTrigo: TextView? = null
-    // var db = FirebaseFirestore.getInstance()
+    var db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -277,6 +281,8 @@ class Cereales : AppCompatActivity() {
             cantidad = 0; tvCanTrigo!!.setText(cantidad.toString())
         }
         valorTrigo!!.setText("" + valTrigo * cantidad)
+
+
     }
 
 
@@ -290,37 +296,111 @@ class Cereales : AppCompatActivity() {
         var quinoa: String = valorQuinoa!!.text.toString()
         var trigo: String = valorTrigo!!.text.toString()
 
+        var arrozCan: Int = tvCanArroz!!.text.toString().toInt()
+        var avenaCan: Int = tvCanAvena!!.text.toString().toInt()
+        var lentejaCan: Int = tvCanLenteja!!.text.toString().toInt()
+        var maizCan: Int = tvCanMaiz!!.text.toString().toInt()
+        var panCan: Int = tvCanPan!!.text.toString().toInt()
+        var pastaCan: Int = tvCanPasta!!.text.toString().toInt()
+        var quinoaCan: Int = tvCanQuinoa!!.text.toString().toInt()
+        var trigoCan: Int = tvCanTrigo!!.text.toString().toInt()
 
-        Toast.makeText(
+
+       Toast.makeText(
             this,
-            "Arroz = $ " + arroz + "\nAvena = $ " + avena + "\nLentejas = $ " + lenteja +
+            "SE HA CARGADO AL CARRITO DE MERCADO LO SIGUIENTE :  \n Arroz = $ " + arroz + "\nAvena = $ " + avena + "\nLentejas = $ " + lenteja +
                     "\nMaiz = $ " + maiz + "\nPan = $ " + pan + "\nPasta = $ " + pasta + "\nQuinoa = $ " + quinoa +
                     "\nTrigo = $ " + trigo,
             Toast.LENGTH_LONG
         ).show()
+        val cargueCarrito = CarroMercado(
+            "Cereales",
+            "arroz",
+            "avena",
+            "lenteja",
+            "maiz",
+            "pan",
+            "pasta",
+            "quinoa",
+            "trigo",
+            arroz,
+            avena,
+            lenteja,
+            maiz,
+            pan,
+            pasta,
+            quinoa,
+            trigo, arrozCan, avenaCan, lentejaCan, maizCan, panCan, pastaCan, quinoaCan, trigoCan
+        )
 
-        val cereales= listOf<String>("Arroz","Avena","Lenteja","Maiz","Pan","Pasta","Quinoa","Trigo")
-        var valorCereales= mutableListOf<String>(arroz,avena,lenteja,maiz,pan,pasta,quinoa,trigo)
-        var intentCarrito = Intent(this, Pruebas::class.java)
+       cargueCarrito.cargar()
+       // cargueCarrito.cargarPrueba()
 
-        intentCarrito.putExtra("categoria","Cereales")
-        intentCarrito.putExtra("producto1","arroz")
-        intentCarrito.putExtra("producto2","avena")
-        intentCarrito.putExtra("producto3","lenteja")
-        intentCarrito.putExtra("producto4","maiz")
-        intentCarrito.putExtra("producto5","pan")
-        intentCarrito.putExtra("producto6","pasta")
-        intentCarrito.putExtra("producto7","quinoa")
-        intentCarrito.putExtra("producto8","trigo")
-        intentCarrito.putExtra("valor1", arroz)
-        intentCarrito.putExtra("valor2", avena)
-        intentCarrito.putExtra("valor3",lenteja)
-        intentCarrito.putExtra("valor4",maiz)
-        intentCarrito.putExtra("valor5",pan)
-        intentCarrito.putExtra("valor6",pasta)
-        intentCarrito.putExtra("valor7",quinoa)
-        intentCarrito.putExtra("valor8",trigo)
-        startActivity(intentCarrito)
+        // cargueCarrito.mostrarCarrito()
+      // pruebaExtraerBD1()
+
 
     }
+
+    fun pruebaExtraerBD1() {
+
+
+        var datos: MutableList<String> = mutableListOf<String>()
+        db.collection("carritoMercado").get().addOnSuccessListener { document ->
+
+            for (documento in document) {
+
+                AlertDialog.Builder(this)
+
+                    .setMessage(documento.id + "${documento.data}")
+                    .create().show()
+
+                var  datoBD =   "${documento.data}"
+
+                datos.add("${documento.data}")
+            }
+
+            var intentCarrito = Intent(this, VerCarroMercado::class.java)
+            intentCarrito.putExtra("datos", datos[0])
+            intentCarrito.putExtra("datos1", datos[1])
+            intentCarrito.putExtra("datos2", datos[2])
+            intentCarrito.putExtra("datos3", datos[3])
+            intentCarrito.putExtra("datos4", datos[4])
+            intentCarrito.putExtra("datos5", datos[5])
+
+
+
+            startActivity(intentCarrito)
+
+
+
+    }}
+
+
+
+
 }
+
+
+
+   /* fun pruebaExtraerBD2() {
+
+        db.collection("carritoMercado").document("Cereales").collection("cereales").get()
+            .addOnSuccessListener { documentos ->
+
+
+                if(documentos.any()){
+                    for(item in documentos ){
+
+                        Log.d(TAG, "${item.id} => ${item.data}")
+                        println( item.data["nombre"].toString())
+                    }
+
+                }
+
+
+            }
+    }*/
+
+
+

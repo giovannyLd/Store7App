@@ -290,42 +290,41 @@ class Embutidos : AppCompatActivity() {
         var salchichas: String = valorSalchichas!!.text.toString()
         var salchichon: String = valorSalchicon!!.text.toString()
 
+        var chorizoCan: Int = tvCanChorizo!!.text.toString().toInt()
+        var pizzaCan: Int = tvCanPizza!!.text.toString().toInt()
+        var hamburguesaCan: Int = tvCanHamburguesa!!.text.toString().toInt()
+        var jamonCan: Int = tvCanJamon!!.text.toString().toInt()
+        var mortadelaCan: Int = tvCanMortadela!!.text.toString().toInt()
+        var salamiCan: Int = tvCanSalami!!.text.toString().toInt()
+        var salchichasCan: Int = tvCanSalchichas!!.text.toString().toInt()
+        var salchichonCan: Int = tvCanSalchicon!!.text.toString().toInt()
+
 
         Toast.makeText(
             this,
-            "Chorizo = $ " + chorizo + "\nPizza = $ " + pizza + "\nHamburguesas = $ " + hamburguesa +
+            "SE HA CARGADO AL CARRITO DE MERCADO LO SIGUIENTE :  \n Chorizo = $ " + chorizo + "\nPizza = $ " + pizza + "\nHamburguesas = $ " + hamburguesa +
                     "\nJamon = $ " + jamon + "\nMortadela = $ " + mortadela + "\nSalami = $ " + salami + "\nSalchichas = $ " + salchichas +
                     "\nSalchicon = $ " + salchichon,
             Toast.LENGTH_LONG
         ).show()
-        var intentCarrito = Intent(this, Pruebas::class.java)
-        intentCarrito.putExtra("chorizo", chorizo)
-        intentCarrito.putExtra("pizza", pizza)
-        intentCarrito.putExtra("Hamburguesa",hamburguesa)
-        intentCarrito.putExtra("jamon",jamon)
-        intentCarrito.putExtra("mortadela",mortadela)
-        intentCarrito.putExtra("salami",salami)
-        intentCarrito.putExtra("salchichas",salchichas)
-        intentCarrito.putExtra("salchicon",salchichon)
-        startActivity(intentCarrito)
-        intentCarrito.putExtra("categoria","Embutidos")
-        intentCarrito.putExtra("producto1","chorizo")
-        intentCarrito.putExtra("producto2","pizza")
-        intentCarrito.putExtra("producto3","hamburguesa")
-        intentCarrito.putExtra("producto4","jamon")
-        intentCarrito.putExtra("producto5","mortadela")
-        intentCarrito.putExtra("producto6","salimi")
-        intentCarrito.putExtra("producto7","salchichas")
-        intentCarrito.putExtra("producto8","salchichon")
-        intentCarrito.putExtra("valor1", chorizo)
-        intentCarrito.putExtra("valor2", pizza)
-        intentCarrito.putExtra("valor3",hamburguesa)
-        intentCarrito.putExtra("valor4",jamon)
-        intentCarrito.putExtra("valor5",mortadela)
-        intentCarrito.putExtra("valor6",salami)
-        intentCarrito.putExtra("valor7",salchichas)
-        intentCarrito.putExtra("valor8",salchichon)
-        startActivity(intentCarrito)
+
+        val cargueCarrito = CarroMercado(
+            "Embutidos",
+            "chorizo",
+            "pizza",
+            "hamburguesa",
+            "jamon",
+            "mortadela",
+            "salami",
+            "salchichas",
+            "salchichon",
+            chorizo,pizza,hamburguesa,jamon,mortadela,salami,salchichas,salchichon,chorizoCan,pizzaCan,hamburguesaCan,jamonCan,mortadelaCan,salamiCan,salchichasCan,salchichonCan
+        )
+        cargueCarrito.cargar()
+        //cargueCarrito.cargarPrueba()
+
+
+
 
     }
 }

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.google.firebase.firestore.FirebaseFirestore
 
 class LoginActivity : AppCompatActivity() {
 
@@ -15,6 +16,7 @@ class LoginActivity : AppCompatActivity() {
     private var robot: CheckBox? = null
     private var vLayout:LinearLayout?=null
     private var vResult: TextView?=null
+    var db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,21 +42,31 @@ class LoginActivity : AppCompatActivity() {
                 vista.text="ERROR DE LOGUEO"
                 vista.setTextColor( Color.RED )
             } else {
-                if (usuario == "giovanny" && contrasena=="1234") {
-                    if(robot.isChecked){
-                        vista.text="OK USUARIO LOGUEADO"
-                        vista.setTextColor(Color.GREEN)
-                        Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_LONG).show()
+// chequeo desde la base de datos
+                db.collection("Formulario").document(usuario).get()
+                    .addOnSuccessListener { document ->
+                        //valida correo y contrasena
+                        if(document.exists()&& document.getString("contrasena")==contrasena) {
 
-                        val marker = Intent(this,MarkerActivity::class.java)
-                        startActivity(marker)
-                    }else{
-                        Toast.makeText(getApplicationContext(), "CHEQUEA QUE NO ERES UN ROBOT",
-                            Toast.LENGTH_LONG).show()
-                        vista.text="ERROR DE LOGUEO"
-                        vista.setTextColor( Color.RED)
-                    }
-                } else {
+                            Toast.makeText(getApplicationContext(), "Bienvenido "+usuario,
+                                Toast.LENGTH_LONG).show()
+                            if(robot.isChecked){
+                                vista.text="OK USUARIO LOGUEADO"
+                                vista.setTextColor(Color.GREEN)
+
+
+                                val marker = Intent(this,MarkerActivity::class.java)
+                                startActivity(marker)
+                            }else{
+                                Toast.makeText(getApplicationContext(), "CHEQUEA QUE NO ERES UN ROBOT",
+                                    Toast.LENGTH_LONG).show()
+                                vista.text="ERROR DE LOGUEO"
+                                vista.setTextColor( Color.RED)
+                            }
+
+                        }
+
+                 else {
                     Toast.makeText(getApplicationContext(),"USUARIO NO EXISTE O PASSWORD INCORRECTO",
                     Toast.LENGTH_SHORT).show()
                     vista.text="ERROR DE LOGUEO"
@@ -63,7 +75,32 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
-}
+
+    fun validacionUsuarioBD(usuario:String,contrasena:String){
+
+
+       db.collection("Formulario").document(usuario).get()
+               .addOnSuccessListener { document ->
+                   if(document.exists()&& document.getString("contrasena")==contrasena) {
+
+                       if(robot.isChecked){
+                           vista.text="OK USUARIO LOGUEADO"
+                           vista.setTextColor(Color.GREEN)
+
+
+                           val marker = Intent(this,MarkerActivity::class.java)
+                           startActivity(marker)
+                       }else{
+                           Toast.makeText(getApplicationContext(), "CHEQUEA QUE NO ERES UN ROBOT",
+                               Toast.LENGTH_LONG).show()
+                           vista.text="ERROR DE LOGUEO"
+                           vista.setTextColor( Color.RED)
+                       }
+
+                   }
+        }
+    }
+}}
 
 
 

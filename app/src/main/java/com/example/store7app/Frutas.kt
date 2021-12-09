@@ -212,10 +212,38 @@ class Frutas : AppCompatActivity() {
         var papaya:String = valorPapaya!!.text.toString()
 
 
-        Toast.makeText(this, "Arandanos = $ "+ arandanos+"\nBanana = $ "+banana+"\nCerezas = $ "+cereza+
+        var arandanosCan: Int = tvCanArandanos!!.text.toString().toInt()
+        var bananaCan: Int = tvCanBanana!!.text.toString().toInt()
+        var cerezaCan: Int = tvCanCereza!!.text.toString().toInt()
+        var duraznoCan: Int = tvCanDurazno!!.text.toString().toInt()
+        var manzanaCan: Int = tvCanManzana!!.text.toString().toInt()
+        var patillaCan: Int = tvCanPatilla!!.text.toString().toInt()
+        var pinaCan: Int = tvCanPina!!.text.toString().toInt()
+        var papayaCan: Int = tvCanPapaya!!.text.toString().toInt()
+
+
+
+        Toast.makeText(this, "SE HA CARGADO AL CARRITO DE MERCADO LO SIGUIENTE :  \n Arandanos = $ "+ arandanos+"\nBanana = $ "+banana+"\nCerezas = $ "+cereza+
                 "\nDurazno = $ "+durazno+"\nManzana = $ "+manzana+"\nPatilla = $ "+patilla+"\nPina = $ "+pina+
                 "\nPapaya = $ "+papaya, Toast.LENGTH_LONG).show()
-        var intentCarrito= Intent(this,Pruebas::class.java)
+
+        val cargueCarrito = CarroMercado(
+            "Frutas",
+            "arandanos",
+            "banana",
+            "cereza",
+            "durazno",
+            "manzana",
+            "patilla",
+            "pina",
+            "papaya",
+        arandanos,banana,cereza,durazno,manzana,patilla,pina,papaya,arandanosCan,bananaCan,cerezaCan,duraznoCan,manzanaCan,patillaCan,pinaCan,papayaCan)
+
+        cargueCarrito.cargar()
+        //cargueCarrito.cargarPrueba()
+
+
+       /* var intentCarrito= Intent(this,Pruebas::class.java)
 
         intentCarrito.putExtra("categoria","Frutas")
         intentCarrito.putExtra("producto1","banana")
@@ -234,7 +262,7 @@ class Frutas : AppCompatActivity() {
         intentCarrito.putExtra("valor6",patilla)
         intentCarrito.putExtra("valor7",pina)
         intentCarrito.putExtra("valor8",papaya)
-        startActivity(intentCarrito)
+        startActivity(intentCarrito)*/
 
 
     }
