@@ -76,30 +76,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun validacionUsuarioBD(usuario:String,contrasena:String){
 
-
-       db.collection("Formulario").document(usuario).get()
-               .addOnSuccessListener { document ->
-                   if(document.exists()&& document.getString("contrasena")==contrasena) {
-
-                       if(robot.isChecked){
-                           vista.text="OK USUARIO LOGUEADO"
-                           vista.setTextColor(Color.GREEN)
-
-
-                           val marker = Intent(this,MarkerActivity::class.java)
-                           startActivity(marker)
-                       }else{
-                           Toast.makeText(getApplicationContext(), "CHEQUEA QUE NO ERES UN ROBOT",
-                               Toast.LENGTH_LONG).show()
-                           vista.text="ERROR DE LOGUEO"
-                           vista.setTextColor( Color.RED)
-                       }
-
-                   }
-        }
-    }
 }}
 
 
