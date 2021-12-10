@@ -619,25 +619,22 @@
           android:gravity="center_vertical">
 
         <Button
-            android:layout_width="300dp"
-            android:layout_height="80dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:onClick="envioCarrito"
             android:text="@string/text_cargar" />
 
-        <com.getbase.floatingactionbutton.FloatingActionsMenu
-            android:id="@+id/principal"
-            android:layout_width="47dp"
-            android:layout_height="52dp"
-            android:layout_gravity="bottom|center_vertical"
-            android:onClick="VerCarrito"
-            app:fab_addButtonColorNormal="@color/pink"
-            app:fab_addButtonColorPressed="@color/purple_500"
-            app:fab_icon="@mipmap/carrito"
-            app:fab_size="mini">
+         <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/idCarro1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_size="mini"
+                    android:onClick="VerCarrito"
+                    app:fab_icon="@drawable/carrito"/>
 
 
-        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
       </LinearLayout>
 
 
