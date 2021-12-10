@@ -26,6 +26,7 @@ class VerCarroMercado : AppCompatActivity() {
     //recycler view
     private lateinit var recyclerView: RecyclerView
     private var db = FirebaseFirestore.getInstance()
+    var usuario:String?=null
     private val listaProductos: List<ProductoEntity> = listOf(
         ProductoEntity("Arroz", "arroz- 2 - 1800"),
         ProductoEntity("avena", "avena -3. 2200")
@@ -37,7 +38,7 @@ class VerCarroMercado : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ver_carro_mercado)
 
-        var usuario:String? = getIntent().getStringExtra("usuario")
+        usuario = getIntent().getStringExtra("usuario")
 
         Toast.makeText(this,"desde ver carrito  "+ usuario,Toast.LENGTH_SHORT).show()
 
@@ -164,6 +165,7 @@ class VerCarroMercado : AppCompatActivity() {
         db.collection("carritoMercado").document("Verduras").delete()
 
         val marker = Intent(this,MarkerActivity::class.java)
+        marker.putExtra("usuario",usuario)
         startActivity(marker)
     }
 

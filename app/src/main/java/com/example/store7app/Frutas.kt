@@ -61,11 +61,12 @@ class Frutas : AppCompatActivity() {
     protected var btnMasPapaya: Button? = null
     protected var valorPapaya:TextView?=null
     // var db = FirebaseFirestore.getInstance()
+    var usuario:String?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_frutas)
 
-        var usuario:String? = getIntent().getStringExtra("usuario")
+        usuario= getIntent().getStringExtra("usuario")
 
         Toast.makeText(this,"desde frutas "+ usuario,Toast.LENGTH_SHORT).show()
 
@@ -274,6 +275,7 @@ class Frutas : AppCompatActivity() {
 
     fun VerCarrito(view: android.view.View) {
         val marker = Intent(this, VerCarroMercado::class.java)
+        marker.putExtra("usuario",usuario)
         startActivity(marker)
     }
 

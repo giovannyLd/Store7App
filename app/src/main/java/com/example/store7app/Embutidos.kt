@@ -61,6 +61,7 @@ class Embutidos : AppCompatActivity() {
     protected var btnMasSalchicon: Button? = null
     protected var valorSalchicon: TextView? = null
     // var db = FirebaseFirestore.getInstance()
+    var usuario:String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -335,6 +336,7 @@ class Embutidos : AppCompatActivity() {
 
        fun VerCarrito(view: android.view.View) {
         val marker = Intent(this, VerCarroMercado::class.java)
+           marker.putExtra("usuario",usuario)
         startActivity(marker)
     }
 }

@@ -58,12 +58,13 @@ class Proteinas : AppCompatActivity() {
     protected var btnMasSardinas: Button? = null
     protected var valorSardinas: TextView? = null
     // var db = FirebaseFirestore.getInstance()
+    var usuario:String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_proteinas)
 
-        var usuario:String? = getIntent().getStringExtra("usuario")
+        usuario = getIntent().getStringExtra("usuario")
 
         Toast.makeText(this,"desde proteinas "+ usuario,Toast.LENGTH_SHORT).show()
 
@@ -363,6 +364,7 @@ class Proteinas : AppCompatActivity() {
 
     fun VerCarrito(view: android.view.View) {
         val marker = Intent(this, VerCarroMercado::class.java)
+        marker.putExtra("usuario",usuario)
         startActivity(marker)
     }
 }
