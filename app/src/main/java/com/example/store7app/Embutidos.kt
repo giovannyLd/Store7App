@@ -327,4 +327,9 @@ class Embutidos : AppCompatActivity() {
 
 
     }
+
+       fun VerCarrito(view: android.view.View) {
+        val marker = Intent(this, VerCarroMercado::class.java)
+        startActivity(marker)
+    }
 }

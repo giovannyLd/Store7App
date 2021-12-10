@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/drawable-xhdpi/customborderproduct.xml" value="0.2203125" />
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/font/estilos.xml" value="0.23076923076923078" />
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/font/lobster_italic.xml" value="0.23076923076923078" />
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/font/lobster_regular.xml" value="0.23076923076923078" />
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout-land/activity_main.xml" value="0.35315315315315315" />
+        <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout-w1240dp/activity_frutas.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout-w936dp/activity_frutas.xml" value="0.153125" />
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_cereales.xml" value="0.22" />
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_cereales2.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_embutidos.xml" value="0.25" />
@@ -16,9 +19,9 @@
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_marker.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_proteinas.xml" value="0.22" />
+        <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_proteinas.xml" value="0.2" />
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_pruebas.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_salsas.xml" value="0.25" />
+        <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_salsas.xml" value="0.22" />
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_terminos_condiciones.xml" value="0.25" />
         <entry key="..\:/Users/LilianaR/AndroidStudioProjects/Store7App/app/src/main/res/layout/activity_verduras.xml" value="0.25" />
         <entry key="..\:/Users/giova/AndroidStudioProjects/Store7App/app/src/main/res/drawable-hdpi/ic_launcher_background.xml" value="0.150390625" />
