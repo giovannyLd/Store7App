@@ -135,8 +135,10 @@ class FormActivity : AppCompatActivity() {
                                 )
                             )
 
-                            // showHome(cedula, ProviderType.BASIC)
+                            // datos ok se devuelve  para la pantalla principal
+                            val marker = Intent(this, MainActivity::class.java)
 
+                            startActivity(marker)
 
                         } else {
                             mensaje("Debe aceptar terminos y condiciones ")

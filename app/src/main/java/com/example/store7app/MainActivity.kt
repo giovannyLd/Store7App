@@ -1,5 +1,9 @@
 package com.example.store7app
-
+//validar en formulario si usuario ya existe
+//crear historico en base de datos
+//recuperar constrasena
+//arreglar boton carrito
+//crear formulario de compra
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +20,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+      //  setSupportActionBar(findViewById(R.id.miTolbar))
 
         btnLog = findViewById(R.id.btnLogin)
         btnCheck = findViewById(R.id.btnCheckIn)

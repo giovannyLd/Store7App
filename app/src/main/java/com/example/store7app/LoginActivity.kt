@@ -9,7 +9,7 @@ import android.view.View
 import android.widget.*
 import com.google.firebase.firestore.FirebaseFirestore
 
-class LoginActivity : AppCompatActivity() {
+open class LoginActivity : AppCompatActivity() {
 
     private var user: EditText? = null
     private var password: EditText? = null

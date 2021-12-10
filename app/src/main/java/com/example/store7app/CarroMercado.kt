@@ -109,22 +109,24 @@ class CarroMercado(
 
     fun borrarBD(){
         db.collection("carritoMercado").document("Cereales").delete()
+        db.collection("carrito").document("arroz")
 
     }
 
-
-
     fun cargarPrueba() {
 
+       Toast.makeText(getApplicationContext(),"desde cargar prueba",Toast.LENGTH_LONG).show()
+        println("desde cargara prueba ")
         var y=0
         for(x in listaCategoriasPrueba){
         val listaProductos = hashMapOf(
 
             "cantidad" to listaCantidad[y],
-            "valor" to listaValor[y]
+            "valor" to listaValor[y],
+            "estado" to "en carrito"
         )
 
-        var coleccion = db.collection("carrito").document(x)
+        var coleccion = db.collection("lo").document(x)
             .set(listaProductos)
             .addOnSuccessListener { println("DocumentSnapshot successfully written!")}
             .addOnFailureListener { e -> println("Error writing document" + e) }

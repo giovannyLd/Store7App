@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import com.facebook.FacebookSdk
 import com.google.firebase.firestore.FirebaseFirestore
 //import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
@@ -65,15 +66,15 @@ class Cereales : AppCompatActivity() {
     protected var btnMasTrigo: Button? = null
     protected var valorTrigo: TextView? = null
     var db = FirebaseFirestore.getInstance()
-    var usuario:String?=null
+    var usuario: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cereales)
 
-        usuario= getIntent().getStringExtra("usuario")
+        usuario = getIntent().getStringExtra("usuario")
 
-        Toast.makeText(this,"desde cereales "+ usuario,Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "desde cereales " + usuario, Toast.LENGTH_SHORT).show()
 
         tvArroz = findViewById(R.id.tvArroz)
         btnMenosArroz = findViewById(R.id.btnMenosArroz)
@@ -292,6 +293,7 @@ class Cereales : AppCompatActivity() {
 
 
     fun envioCarrito(view: android.view.View) {
+
         var arroz: String = valorArroz!!.text.toString()
         var avena: String = valorAvena!!.text.toString()
         var lenteja: String = valorLenteja!!.text.toString()
@@ -311,7 +313,7 @@ class Cereales : AppCompatActivity() {
         var trigoCan: Int = tvCanTrigo!!.text.toString().toInt()
 
 
-       Toast.makeText(
+        Toast.makeText(
             this,
             "SE HA CARGADO AL CARRITO DE MERCADO LO SIGUIENTE :  \n Arroz = $ " + arroz + "\nAvena = $ " + avena + "\nLentejas = $ " + lenteja +
                     "\nMaiz = $ " + maiz + "\nPan = $ " + pan + "\nPasta = $ " + pasta + "\nQuinoa = $ " + quinoa +
@@ -338,60 +340,45 @@ class Cereales : AppCompatActivity() {
             trigo, arrozCan, avenaCan, lentejaCan, maizCan, panCan, pastaCan, quinoaCan, trigoCan
         )
 
-       cargueCarrito.cargar()
-       // cargueCarrito.cargarPrueba()
-
-        // cargueCarrito.mostrarCarrito()
-      // pruebaExtraerBD1()
+        cargueCarrito.cargar()
+        // cargueCarrito.cargarPrueba()
 
 
     }
 
-    fun pruebaExtraerBD1() {
+   /*fun pruebaExtraerBD1() {
 
 
-        var datos: MutableList<String> = mutableListOf<String>()
-        db.collection("carritoMercado").get().addOnSuccessListener { document ->
+       var datos: MutableList<String> = mutableListOf<String>()
+       db.collection("carritoMercado").get().addOnSuccessListener { document ->
 
-            for (documento in document) {
+           for (documento in document) {
 
-                AlertDialog.Builder(this)
+               AlertDialog.Builder(this)
 
-                    .setMessage(documento.id + "${documento.data}")
-                    .create().show()
+                   .setMessage(documento.id + "${documento.data}")
+                   .create().show()
 
-                var  datoBD =   "${documento.data}"
+               var datoBD = "${documento.data}"
 
-                datos.add("${documento.data}")
-            }
+               datos.add("${documento.data}")
+           }
+           var intentCarrito = Intent(this, VerCarroMercado::class.java)
+           intentCarrito.putExtra("datos", datos[0])
+           intentCarrito.putExtra("datos1", datos[1])
+           intentCarrito.putExtra("datos2", datos[2])
+           intentCarrito.putExtra("datos3", datos[3])
+           intentCarrito.putExtra("datos4", datos[4])
+           intentCarrito.putExtra("datos5", datos[5])
+           startActivity(intentCarrito)
+       }*/
 
-            var intentCarrito = Intent(this, VerCarroMercado::class.java)
-            intentCarrito.putExtra("datos", datos[0])
-            intentCarrito.putExtra("datos1", datos[1])
-            intentCarrito.putExtra("datos2", datos[2])
-            intentCarrito.putExtra("datos3", datos[3])
-            intentCarrito.putExtra("datos4", datos[4])
-            intentCarrito.putExtra("datos5", datos[5])
-
-
-
-            startActivity(intentCarrito)
-
-
-
-    }}
-
-    fun VerCarrito(view: android.view.View) {
-        val marker = Intent(this, VerCarroMercado::class.java)
-        marker.putExtra("usuario",usuario)
-        startActivity(marker)
-    }
-
-
-}
-
-
-
+       fun VerCarrito(view: android.view.View) {
+           val marker = Intent(this, VerCarroMercado::class.java)
+           marker.putExtra("usuario", usuario)
+           startActivity(marker)
+       }
+   }
    /* fun pruebaExtraerBD2() {
 
         db.collection("carritoMercado").document("Cereales").collection("cereales").get()

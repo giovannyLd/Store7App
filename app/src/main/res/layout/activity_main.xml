@@ -9,6 +9,8 @@
     android:background="@color/morado"
     android:layout_gravity="center">
 
+
+
 <LinearLayout
     android:layout_margin="16dp"
     android:layout_width="match_parent"

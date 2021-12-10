@@ -67,7 +67,7 @@ class Embutidos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_embutidos)
 
-        var usuario:String? = getIntent().getStringExtra("usuario")
+        usuario= getIntent().getStringExtra("usuario")
 
         Toast.makeText(this,"desde embutidos "+ usuario,Toast.LENGTH_SHORT).show()
 
@@ -334,9 +334,9 @@ class Embutidos : AppCompatActivity() {
 
     }
 
-       fun VerCarrito(view: android.view.View) {
+    fun VerCarrito(view: android.view.View) {
         val marker = Intent(this, VerCarroMercado::class.java)
-           marker.putExtra("usuario",usuario)
+        marker.putExtra("usuario",usuario)
         startActivity(marker)
     }
 }
