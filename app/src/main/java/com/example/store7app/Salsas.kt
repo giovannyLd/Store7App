@@ -66,7 +66,12 @@ class Salsas : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_salsas)
 
-          tvFruco = findViewById(R.id.tvFruco)
+        var usuario:String? = getIntent().getStringExtra("usuario")
+
+        Toast.makeText(this,"desde salsas "+ usuario,Toast.LENGTH_SHORT).show()
+
+
+        tvFruco = findViewById(R.id.tvFruco)
         btnMenosFruco = findViewById(R.id.btnMenosFruco)
         tvCanFruco = findViewById(R.id.tvCanFruco)
         btnMasFruco = findViewById(R.id.btnMasFruco)

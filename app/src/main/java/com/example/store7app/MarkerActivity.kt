@@ -12,24 +12,32 @@ class MarkerActivity : AppCompatActivity() {
 
 
     var db = FirebaseFirestore.getInstance()
+    var usuario:String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_marker)
 
+        usuario = getIntent().getStringExtra("usuario")
+
+        Toast.makeText(this,"desde marker "+ usuario,Toast.LENGTH_SHORT).show()
+
         var botoncereales: ImageButton = findViewById(R.id.btnCereales)
         botoncereales.setOnClickListener { view ->
           val marker = Intent(this,Cereales::class.java)
+            marker.putExtra("usuario",usuario)
             startActivity(marker)
         }
         var botonfrutas: ImageButton = findViewById(R.id.btnFrutas)
         botonfrutas.setOnClickListener { view ->
             val marker = Intent(this,Frutas::class.java)
+            marker.putExtra("usuario",usuario)
             startActivity(marker)
         }
         var botonverduras: ImageButton = findViewById(R.id.btnVerduras)
         botonverduras.setOnClickListener { view ->
             val marker = Intent(this,Verduras::class.java)
+            marker.putExtra("usuario",usuario)
             startActivity(marker)
         }
         var botonproteinas: ImageButton = findViewById(R.id.btnProteinas)
@@ -37,13 +45,16 @@ class MarkerActivity : AppCompatActivity() {
 
 
             val marker = Intent(this,Proteinas::class.java)
+            marker.putExtra("usuario",usuario)
                startActivity(marker)
               }
             var botonsalsas: ImageButton = findViewById(R.id.btnSalsas)
+
             botonsalsas.setOnClickListener { view ->
 
 
              val marker = Intent(this, Salsas::class.java)
+                marker.putExtra("usuario",usuario)
                 startActivity(marker)
             }
         var botonembutidos: ImageButton = findViewById(R.id.btnEmbutidos)
@@ -51,8 +62,12 @@ class MarkerActivity : AppCompatActivity() {
 
 
             val marker = Intent(this, Embutidos::class.java)
+                 marker.putExtra("usuario",usuario)
             startActivity(marker)
         }
+
+
+
 
         }
 
@@ -71,6 +86,7 @@ class MarkerActivity : AppCompatActivity() {
         Toast.makeText(getApplicationContext(),"btncarro1",Toast.LENGTH_LONG).show()
 
         val marker = Intent(this, VerCarroMercado::class.java)
+            .putExtra("usuario",usuario)
         startActivity(marker)
 
 

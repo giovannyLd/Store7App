@@ -61,6 +61,7 @@
             android:textColorHint="@color/colorHint"
             android:background="@drawable/style_border"
             android:hint="@string/hint_username"
+            android:inputType="textEmailAddress"
             android:textColor="@color/white"
             android:layout_margin="5dp"/>
 

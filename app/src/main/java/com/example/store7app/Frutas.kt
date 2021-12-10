@@ -65,6 +65,11 @@ class Frutas : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_frutas)
 
+        var usuario:String? = getIntent().getStringExtra("usuario")
+
+        Toast.makeText(this,"desde frutas "+ usuario,Toast.LENGTH_SHORT).show()
+
+
         tvArandanos = findViewById(R.id.tvArandanos)
         btnMenosArandanos = findViewById(R.id.btnMenosArandanos)
         tvCanArandanos = findViewById(R.id.tvCanArandanos)

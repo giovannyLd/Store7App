@@ -66,6 +66,11 @@ class Embutidos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_embutidos)
 
+        var usuario:String? = getIntent().getStringExtra("usuario")
+
+        Toast.makeText(this,"desde embutidos "+ usuario,Toast.LENGTH_SHORT).show()
+
+
         tvChorizo = findViewById(R.id.tvChorizo)
         btnMenosChorizo = findViewById(R.id.btnMenosChorizo)
         tvCanChorizo = findViewById(R.id.tvCanChorizo)

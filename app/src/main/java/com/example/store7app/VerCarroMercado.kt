@@ -37,6 +37,11 @@ class VerCarroMercado : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ver_carro_mercado)
 
+        var usuario:String? = getIntent().getStringExtra("usuario")
+
+        Toast.makeText(this,"desde ver carrito  "+ usuario,Toast.LENGTH_SHORT).show()
+
+
 
 //recycler view
         //   recyclerView=findViewById<RecyclerView>(R.id.vistaRecycler)

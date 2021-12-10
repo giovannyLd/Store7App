@@ -63,6 +63,11 @@ class Proteinas : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_proteinas)
 
+        var usuario:String? = getIntent().getStringExtra("usuario")
+
+        Toast.makeText(this,"desde proteinas "+ usuario,Toast.LENGTH_SHORT).show()
+
+
         tvAtun = findViewById(R.id.tvAtun)
         btnMenosAtun = findViewById(R.id.btnMenosAtun)
         tvCanAtun = findViewById(R.id.tvCanAtun)

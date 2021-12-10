@@ -66,6 +66,11 @@ class Verduras : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verduras)
 
+        var usuario:String? = getIntent().getStringExtra("usuario")
+
+        Toast.makeText(this,"desde verduras "+ usuario,Toast.LENGTH_SHORT).show()
+
+
         tvAguacate = findViewById(R.id.tvAguacate)
         btnMenosAguacate = findViewById(R.id.btnMenosAguacate)
         tvCanAguacate = findViewById(R.id.tvCanAguacate)

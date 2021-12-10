@@ -56,6 +56,7 @@ class LoginActivity : AppCompatActivity() {
 
 
                                 val marker = Intent(this,MarkerActivity::class.java)
+                                    .putExtra("usuario",usuario)
                                 startActivity(marker)
                             }else{
                                 Toast.makeText(getApplicationContext(), "CHEQUEA QUE NO ERES UN ROBOT",
