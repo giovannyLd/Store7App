@@ -328,6 +328,7 @@ class Embutidos : AppCompatActivity() {
         )
         cargueCarrito.cargar()
         //cargueCarrito.cargarPrueba()
+        cargueCarrito.historico("$usuario")
 
 
 

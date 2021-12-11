@@ -247,28 +247,7 @@ class Frutas : AppCompatActivity() {
 
         cargueCarrito.cargar()
         //cargueCarrito.cargarPrueba()
-
-
-       /* var intentCarrito= Intent(this,Pruebas::class.java)
-
-        intentCarrito.putExtra("categoria","Frutas")
-        intentCarrito.putExtra("producto1","banana")
-        intentCarrito.putExtra("producto2","cereza")
-        intentCarrito.putExtra("producto3","cereza")
-        intentCarrito.putExtra("producto4","durazno")
-        intentCarrito.putExtra("producto5","manzana")
-        intentCarrito.putExtra("producto6","patilla")
-        intentCarrito.putExtra("producto7","pina")
-        intentCarrito.putExtra("producto8","papaya")
-        intentCarrito.putExtra("valor1", arandanos)
-        intentCarrito.putExtra("valor2", banana)
-        intentCarrito.putExtra("valor3",cereza)
-        intentCarrito.putExtra("valor4",durazno)
-        intentCarrito.putExtra("valor5",manzana)
-        intentCarrito.putExtra("valor6",patilla)
-        intentCarrito.putExtra("valor7",pina)
-        intentCarrito.putExtra("valor8",papaya)
-        startActivity(intentCarrito)*/
+        cargueCarrito.historico("$usuario")
 
 
     }

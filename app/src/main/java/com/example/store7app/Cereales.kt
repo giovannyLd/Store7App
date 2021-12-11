@@ -341,7 +341,8 @@ class Cereales : AppCompatActivity() {
         )
 
         cargueCarrito.cargar()
-        // cargueCarrito.cargarPrueba()
+        //cargueCarrito.cargarPrueba()
+        cargueCarrito.historico("$usuario")
 
 
     }

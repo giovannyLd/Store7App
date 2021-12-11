@@ -10,6 +10,9 @@ import com.facebook.FacebookSdk.getApplicationContext
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import java.security.Timestamp
+import java.text.SimpleDateFormat
+import java.time.Instant
+import java.time.Instant.now
 import java.util.*
 
 class CarroMercado(
@@ -43,6 +46,10 @@ class CarroMercado(
    constructor() : this("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",0,0,0,0,0,0,0,0)
 
     var db = FirebaseFirestore.getInstance()
+    val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+
+
+
 
     var listaValor = listOf<Int>(
         valor1.toInt(),
@@ -113,11 +120,43 @@ class CarroMercado(
 
     }
 
+    fun historico(user:String){
+
+        var usuario = user.toString()
+        println("hola como vas dese la funcion historico2 $usuario")
+
+
+        var y=0
+        for(x in listaCantidad  ){
+
+            if(x != 0) {
+
+                val listaProductos = hashMapOf(
+
+                    "fecha" to sdf.format(Date()),
+                    "producto" to listaCategoriasPrueba[y],
+                    "usuario" to usuario,
+                    "cantidad" to x,
+                    "valor" to listaValor[y],
+                    "estado" to "en carrito"
+                )
+
+                var coleccion = db.collection("$usuario").document()
+                    .set(listaProductos)
+                    .addOnSuccessListener { println("DocumentSnapshot successfully written!") }
+                    .addOnFailureListener { e -> println("Error writing document" + e) }
+            }
+
+            y++
+        }
+
+    }
+
     fun cargarPrueba() {
 
-       Toast.makeText(getApplicationContext(),"desde cargar prueba",Toast.LENGTH_LONG).show()
-        println("desde cargara prueba ")
-        var y=0
+       Toast.makeText(getApplicationContext(),"desde cargar prueba usuario",Toast.LENGTH_LONG).show()
+        println("desde cargara prueba usuario")
+ /*       var y=0
         for(x in listaCategoriasPrueba){
         val listaProductos = hashMapOf(
 
@@ -132,7 +171,7 @@ class CarroMercado(
             .addOnFailureListener { e -> println("Error writing document" + e) }
 
                 y++
-        }
+        }*/
     }
 
 

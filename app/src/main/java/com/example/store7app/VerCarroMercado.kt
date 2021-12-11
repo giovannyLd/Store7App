@@ -27,12 +27,12 @@ class VerCarroMercado : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private var db = FirebaseFirestore.getInstance()
     var usuario:String?=null
-    private val listaProductos: List<ProductoEntity> = listOf(
+ /*   private val listaProductos: List<ProductoEntity> = listOf(
         ProductoEntity("Arroz", "arroz- 2 - 1800"),
         ProductoEntity("avena", "avena -3. 2200")
-    )
-    private lateinit var productoAdapter: ProductoAdapter
-
+    )*/
+  /*  private lateinit var productoAdapter: ProductoAdapter
+*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
