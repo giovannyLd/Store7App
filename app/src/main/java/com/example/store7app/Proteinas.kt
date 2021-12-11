@@ -68,7 +68,6 @@ class Proteinas : AppCompatActivity() {
 
         usuario = getIntent().getStringExtra("usuario")
 
-        Toast.makeText(this,"desde proteinas "+ usuario,Toast.LENGTH_SHORT).show()
 
 
         tvAtun = findViewById(R.id.tvAtun)

@@ -10,9 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/tienda"
         android:supportsRtl="true"
-
-        android:theme="@style/Theme.Store7App"
-    >
+        android:theme="@style/Theme.Store7App">
+        <activity
+            android:name=".Buy_activity"
+            android:exported="false" />
         <activity
             android:name=".VerCarroMercado"
             android:exported="false" />

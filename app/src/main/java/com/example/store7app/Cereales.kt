@@ -74,7 +74,7 @@ class Cereales : AppCompatActivity() {
 
         usuario = getIntent().getStringExtra("usuario")
 
-        Toast.makeText(this, "desde cereales " + usuario, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "desde cereales " + usuario, Toast.LENGTH_SHORT).show()
 
         tvArroz = findViewById(R.id.tvArroz)
         btnMenosArroz = findViewById(R.id.btnMenosArroz)

@@ -70,7 +70,7 @@ class Salsas : AppCompatActivity() {
 
         usuario = getIntent().getStringExtra("usuario")
 
-        Toast.makeText(this,"desde salsas "+ usuario,Toast.LENGTH_SHORT).show()
+
 
 
         tvFruco = findViewById(R.id.tvFruco)

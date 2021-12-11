@@ -70,7 +70,7 @@ class Verduras : AppCompatActivity() {
 
         usuario= getIntent().getStringExtra("usuario")
 
-        Toast.makeText(this,"desde verduras "+ usuario,Toast.LENGTH_SHORT).show()
+
 
 
         tvAguacate = findViewById(R.id.tvAguacate)

@@ -70,7 +70,6 @@ class Embutidos : AppCompatActivity() {
 
         usuario= getIntent().getStringExtra("usuario")
 
-        Toast.makeText(this,"desde embutidos "+ usuario,Toast.LENGTH_SHORT).show()
 
 
         tvChorizo = findViewById(R.id.tvChorizo)

@@ -123,6 +123,8 @@
     <string name="prueba1">hola1</string>
     <string name="cerrar">Cerrar Aplicacion</string>
     <string name="buscar">"buscar "</string>
+    <string name="text_comprar">GESTION DE COMPRA</string>
+    <string name="text_direccion">Ingrese direccion donde require el pedido</string>
 
     <!--Array con los valores de la cabecera de la tabla-->
     <string-array name="cabecera_tabla">
@@ -133,7 +135,7 @@
         <item>Valor 4</item>
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
-<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
-<!--    <string name="test_All" />-->
-<!--    <string name="test_All" />-->
+    <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+    <!--    <string name="test_All" />-->
+    <!--    <string name="test_All" />-->
 </resources>

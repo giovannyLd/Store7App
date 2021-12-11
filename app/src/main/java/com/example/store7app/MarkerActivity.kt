@@ -20,7 +20,7 @@ class MarkerActivity : AppCompatActivity() {
 
         usuario = getIntent().getStringExtra("usuario")
 
-        Toast.makeText(this,"desde marker "+ usuario,Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this,"desde marker "+ usuario,Toast.LENGTH_SHORT).show()
 
         var botoncereales: ImageButton = findViewById(R.id.btnCereales)
         botoncereales.setOnClickListener { view ->
@@ -65,11 +65,7 @@ class MarkerActivity : AppCompatActivity() {
                  marker.putExtra("usuario",usuario)
             startActivity(marker)
         }
-
-
-
-
-        }
+    }
 
     fun btnCarro(view: android.view.View) {
 
@@ -83,7 +79,7 @@ class MarkerActivity : AppCompatActivity() {
     }
 
     fun btnCarro1(view: android.view.View) {
-        Toast.makeText(getApplicationContext(),"btncarro1",Toast.LENGTH_LONG).show()
+
 
         val marker = Intent(this, VerCarroMercado::class.java)
             .putExtra("usuario",usuario)

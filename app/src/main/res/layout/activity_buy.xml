@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Buy_activity"
+    android:background="@color/morado">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/style_border">
+
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_comprar"
+            android:layout_marginLeft="30dp"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/style_border">
+
+
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorHint"
+                android:background="@drawable/style_border"
+                android:hint="@string/text_nom"
+                android:textColor="@color/white"
+                android:inputType="textCapSentences"
+                android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz "
+                android:layout_margin="10dp"/>
+            <EditText
+                android:id="@+id/txtApellido"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorHint"
+                android:background="@drawable/style_border"
+                android:hint="@string/text_apell"
+                android:inputType="textCapSentences"
+                android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz "
+                android:textColor="@color/white"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:id="@+id/txtCedula"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorHint"
+                android:background="@drawable/style_border_line"
+                android:hint="@string/text_doc"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:id="@+id/txtTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorHint"
+                android:background="@drawable/style_border_line"
+                android:hint="@string/text_tel"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:id="@+id/txtCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorHint"
+                android:background="@drawable/style_border_line"
+                android:hint="@string/text_corr"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:id="@+id/txtDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorHint"
+                android:background="@drawable/style_border_line"
+                android:hint="@string/text_direccion"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:text="prueba"
+                android:textColor="@color/white"
+                android:layout_margin="15dp"/>
+
+
+
+
+
+            <Button
+                android:id="@+id/BtnRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_margin="20dp"
+                android:onClick="envio"
+
+                android:text="@string/text_guardar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
