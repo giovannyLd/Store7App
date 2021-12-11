@@ -6,47 +6,56 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     tools:context=".MainActivity"
-    android:background="@color/purple_700">
-
-<LinearLayout
-    android:layout_margin="25dp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="horizontal">
+    android:background="@color/morado"
+    android:layout_gravity="right">
 
 
-    <ImageView
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:src="@drawable/tienda" />
 
-</LinearLayout>
-
-<GridLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:columnCount="1"
-    android:rowCount="2"
-    android:layout_margin="20dp"
-    android:layout_gravity="center_vertical"
-    android:useDefaultMargins="true">
-
-    <Button
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="INICIAR SESION"
-        android:textSize="20dp"
-        android:layout_marginEnd="2dp"/>
-    <Button
-        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <ImageView
+            android:layout_width="518dp"
+            android:layout_height="400dp"
+            android:src="@drawable/tienda" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="REGISTRARSE"
-        android:textSize="20dp"
-        android:onClick="checkIn"/>
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:font="@font/lobster_italic"
+            android:fontFamily="sans-serif"
+            android:foregroundTintMode="add"
+            android:onClick="Login"
+            android:text="@string/text_start"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCheckIn"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:font="@font/lobster_italic"
+            android:onClick="checkIn"
+            android:text="@string/text_register"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
 
-
-</GridLayout>
+    </LinearLayout>
 
 </LinearLayout>
