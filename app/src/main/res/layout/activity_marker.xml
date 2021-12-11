@@ -9,12 +9,14 @@
     android:background="@color/morado"
     android:layout_gravity="center">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_margin="30dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/style_border">
 
         <GridLayout
             android:layout_width="match_parent"
@@ -184,7 +186,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:gravity="center"
+            android:background="@drawable/style_border">
 
             <com.getbase.floatingactionbutton.FloatingActionsMenu
                 android:layout_width="wrap_content"

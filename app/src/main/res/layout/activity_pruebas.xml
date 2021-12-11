@@ -8,6 +8,8 @@
     tools:context=".Pruebas"
     android:background="@color/green_500">
 
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSuperHero"
         android:layout_width="match_parent"

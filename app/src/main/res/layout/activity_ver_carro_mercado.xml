@@ -50,6 +50,12 @@
         android:layout_height="wrap_content"
         android:text="Comprar"
         android:onClick="comprar"/>
+    <Button
+        android:id="@+id/cancelar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancelar pedido"
+        android:onClick="cancelar"/>
 
 
 </LinearLayout>

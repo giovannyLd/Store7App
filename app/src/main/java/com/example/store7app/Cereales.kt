@@ -379,7 +379,23 @@ class Cereales : AppCompatActivity() {
            marker.putExtra("usuario", usuario)
            startActivity(marker)
        }
-   }
+
+    fun salir(view: android.view.View) {
+
+        Toast.makeText(this,"SE HA CERRADO SESION ", Toast.LENGTH_LONG).show()
+
+        db.collection("carritoMercado").document("Cereales").delete()
+        db.collection("carritoMercado").document("Embutidos").delete()
+        db.collection("carritoMercado").document("Frutas").delete()
+        db.collection("carritoMercado").document("Proteinas").delete()
+        db.collection("carritoMercado").document("Salsas").delete()
+        db.collection("carritoMercado").document("Verduras").delete()
+        db.collection("carritoMercado").document("Verduras").delete()
+
+        val marker = Intent(this,LoginActivity::class.java)
+        startActivity(marker)
+    }
+}
    /* fun pruebaExtraerBD2() {
 
         db.collection("carritoMercado").document("Cereales").collection("cereales").get()

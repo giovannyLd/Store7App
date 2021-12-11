@@ -6,6 +6,7 @@ import android.content.Intent
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.facebook.FacebookSdk.getApplicationContext
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
@@ -15,7 +16,7 @@ import java.time.Instant
 import java.time.Instant.now
 import java.util.*
 
-class CarroMercado(
+class CarroMercado (
     var categoria: String,
     var producto1: String,
     var producto2: String,
@@ -41,7 +42,7 @@ class CarroMercado(
     var cantidad6:Int,
     var cantidad7:Int,
     var cantidad8:Int,
-) {
+): AppCompatActivity() {
 
    constructor() : this("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",0,0,0,0,0,0,0,0)
 
@@ -114,10 +115,20 @@ class CarroMercado(
        //val data = hashMapOf("capital" to true)
     }
 
-    fun borrarBD(){
-        db.collection("carritoMercado").document("Cereales").delete()
-        db.collection("carrito").document("arroz")
+    fun cerrarSesion() {
 
+        Toast.makeText(this,"SE HA CERRADO SESION ", Toast.LENGTH_LONG).show()
+
+        db.collection("carritoMercado").document("Cereales").delete()
+        db.collection("carritoMercado").document("Embutidos").delete()
+        db.collection("carritoMercado").document("Frutas").delete()
+        db.collection("carritoMercado").document("Proteinas").delete()
+        db.collection("carritoMercado").document("Salsas").delete()
+        db.collection("carritoMercado").document("Verduras").delete()
+        db.collection("carritoMercado").document("Verduras").delete()
+
+        val marker = Intent(this,LoginActivity::class.java)
+        startActivity(marker)
     }
 
     fun historico(user:String){
@@ -152,11 +163,11 @@ class CarroMercado(
 
     }
 
-    fun cargarPrueba() {
+ /*   fun cargarPrueba() {
 
        Toast.makeText(getApplicationContext(),"desde cargar prueba usuario",Toast.LENGTH_LONG).show()
         println("desde cargara prueba usuario")
- /*       var y=0
+       var y=0
         for(x in listaCategoriasPrueba){
         val listaProductos = hashMapOf(
 
@@ -171,15 +182,15 @@ class CarroMercado(
             .addOnFailureListener { e -> println("Error writing document" + e) }
 
                 y++
-        }*/
-    }
+        }
+    }*/
 
 
 
-    fun mostrarCarrito() {
+/*    fun mostrarCarrito() {
 
         println("hola como estan ")
-/*        var datos: MutableList<String> = mutableListOf<String>()
+       var datos: MutableList<String> = mutableListOf<String>()
         db.collection("carritoMercado").get().addOnSuccessListener { document ->
 
             for (documento in document) {
@@ -188,8 +199,8 @@ class CarroMercado(
             }
 
             separarCadena(datos[0])
-        }*/
-    }
+        }
+    }*/
 
     fun separarCadena(datos: String) {
 

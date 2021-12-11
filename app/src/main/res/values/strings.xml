@@ -119,6 +119,10 @@
     b) Reproduce or copy the APP or its contents for private use, as well as communicate them
     publicly or make them available to third parties when this leads to their reproduction.
     c) Extract or reuse all or a substantial part of the contents of the </string>
+    <string name="prueba2">hola2</string>
+    <string name="prueba1">hola1</string>
+    <string name="cerrar">Cerrar Aplicacion</string>
+    <string name="buscar">"buscar "</string>
 
     <!--Array con los valores de la cabecera de la tabla-->
     <string-array name="cabecera_tabla">

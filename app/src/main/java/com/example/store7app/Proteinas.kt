@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.google.firebase.firestore.FirebaseFirestore
+
 //import com.google.firebase.firestore.FirebaseFirestore
 
 
@@ -57,7 +59,7 @@ class Proteinas : AppCompatActivity() {
     protected var tvCanSardinas: TextView? = null
     protected var btnMasSardinas: Button? = null
     protected var valorSardinas: TextView? = null
-    // var db = FirebaseFirestore.getInstance()
+    var db = FirebaseFirestore.getInstance()
     var usuario:String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -348,5 +350,21 @@ class Proteinas : AppCompatActivity() {
         val marker = Intent(this, VerCarroMercado::class.java)
         marker.putExtra("usuario",usuario)
         startActivity(marker)
+    }
+
+    fun salir(view: android.view.View) {
+        Toast.makeText(this,"SE HA CERRADO SESION ", Toast.LENGTH_LONG).show()
+
+        db.collection("carritoMercado").document("Cereales").delete()
+        db.collection("carritoMercado").document("Embutidos").delete()
+        db.collection("carritoMercado").document("Frutas").delete()
+        db.collection("carritoMercado").document("Proteinas").delete()
+        db.collection("carritoMercado").document("Salsas").delete()
+        db.collection("carritoMercado").document("Verduras").delete()
+        db.collection("carritoMercado").document("Verduras").delete()
+
+        val marker = Intent(this,LoginActivity::class.java)
+        startActivity(marker)
+
     }
 }

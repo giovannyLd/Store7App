@@ -40,15 +40,11 @@ class VerCarroMercado : AppCompatActivity() {
 
         usuario = getIntent().getStringExtra("usuario")
 
-        Toast.makeText(this,"desde ver carrito  "+ usuario,Toast.LENGTH_SHORT).show()
-
-
-
+        //Toast.makeText(this,"desde ver carrito  "+ usuario,Toast.LENGTH_SHORT).show()
 //recycler view
         //   recyclerView=findViewById<RecyclerView>(R.id.vistaRecycler)
         //   recyclerView.layoutManager= LinearLayoutManager(actvity_ver_Carro_mercado)
         //   recyclerView.setHasFixedSize(true)
-
         //getAllProduct()
         //   productoAdapter = ProductoAdapter(listProduct, this)
         //   productoAdapter = ProductoAdapter(productos, this)
@@ -88,34 +84,25 @@ class VerCarroMercado : AppCompatActivity() {
                         ""
                     ).split(",").toMutableList()
 
-
                 var x = 0
-
                 while (x < cantida.size) {
-
                     if (cantida[x] != "0") {
-
                         println("" + categoria[x + 1] + " = " + cantida[x] + " = " + valor[x])
                         productos.add("          " + categoria[x + 1] + "                 " + cantida[x] + "    =     $ " + valor[x]+"\n")
                     total += valor[x].toInt()
-
                     }
                     x++
                 }
-
             }
-
             tvDatos!!.setText("" + productos+"" +
                     "\n--------------------------------------------------------------" +
                     "\n              Total       =                  $ "+total)
-
-
         }
 
 
     }
 
-    fun separarCadena(datos: String) {
+  /*  fun separarCadena(datos: String) {
 
         var imagen =
             ((datos.substringAfter("imagen=[")).substringBefore("]")).replace(
@@ -152,7 +139,7 @@ class VerCarroMercado : AppCompatActivity() {
             x++
         }
 
-    }
+    }*/
 
 
     fun comprar(view: android.view.View) {
@@ -163,6 +150,29 @@ class VerCarroMercado : AppCompatActivity() {
         db.collection("carritoMercado").document("Proteinas").delete()
         db.collection("carritoMercado").document("Salsas").delete()
         db.collection("carritoMercado").document("Verduras").delete()
+
+        val marker = Intent(this,MarkerActivity::class.java)
+        marker.putExtra("usuario",usuario)
+        startActivity(marker)
+    }
+
+    fun cancelar(view: android.view.View) {
+
+        Toast.makeText(this,usuario +" A CANCELADO EL PEDIDO", Toast.LENGTH_LONG).show()
+
+
+        db.collection("carritoMercado").document("Cereales").delete()
+        db.collection("carritoMercado").document("Embutidos").delete()
+        db.collection("carritoMercado").document("Frutas").delete()
+        db.collection("carritoMercado").document("Proteinas").delete()
+        db.collection("carritoMercado").document("Salsas").delete()
+        db.collection("carritoMercado").document("Verduras").delete()
+
+        db.collection("carritoMercado").document("Verduras").delete()
+
+
+
+
 
         val marker = Intent(this,MarkerActivity::class.java)
         marker.putExtra("usuario",usuario)
