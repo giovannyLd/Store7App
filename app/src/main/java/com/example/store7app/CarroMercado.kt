@@ -49,9 +49,6 @@ class CarroMercado (
     var db = FirebaseFirestore.getInstance()
     val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
 
-
-
-
     var listaValor = listOf<Int>(
         valor1.toInt(),
         valor2.toInt(),

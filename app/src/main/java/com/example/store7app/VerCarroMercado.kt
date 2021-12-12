@@ -87,7 +87,7 @@ class VerCarroMercado : AppCompatActivity() {
                 var x = 0
                 while (x < cantida.size) {
                     if (cantida[x] != "0") {
-                        println("" + categoria[x + 1] + " = " + cantida[x] + " = " + valor[x])
+                      //  println("" + categoria[x + 1] + " = " + cantida[x] + " = " + valor[x])
                         productos.add("          " + categoria[x + 1] + "                 " + cantida[x] + "    =     $ " + valor[x]+"\n")
                     total += valor[x].toInt()
                     }
@@ -154,14 +154,13 @@ class VerCarroMercado : AppCompatActivity() {
         }
     else{
             Toast.makeText(this,"NO HAY ARTICULOS EN EL CARRITO DE MERCADO"+ total,Toast.LENGTH_LONG).show()
-
-
-    }
-
+        }
     }
 
     fun cancelar(view: android.view.View) {
         Toast.makeText(this,usuario +" A CANCELADO EL PEDIDO", Toast.LENGTH_LONG).show()
+
+        var buy = Buy_activity()
 
         db.collection("carritoMercado").document("Cereales").delete()
         db.collection("carritoMercado").document("Embutidos").delete()
@@ -169,8 +168,11 @@ class VerCarroMercado : AppCompatActivity() {
         db.collection("carritoMercado").document("Proteinas").delete()
         db.collection("carritoMercado").document("Salsas").delete()
         db.collection("carritoMercado").document("Verduras").delete()
-
         db.collection("carritoMercado").document("Verduras").delete()
+
+        println("se cancela pedido antes de  buy")
+            buy.extractKey("cancelada")
+        println("se cancela pedido despues buy")
 
         val marker = Intent(this,MarkerActivity::class.java)
         marker.putExtra("usuario",usuario)

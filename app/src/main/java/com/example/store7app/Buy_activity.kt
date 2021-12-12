@@ -2,11 +2,14 @@ package com.example.store7app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
-import org.w3c.dom.Text
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class Buy_activity : AppCompatActivity() {
 
@@ -15,16 +18,13 @@ class Buy_activity : AppCompatActivity() {
     private var cedula: EditText? = null
     private var telefono: EditText? = null
     private var correo: EditText? = null
-    private var tvTotal: TextView?=null
+    private var tvTotal: TextView? = null
     var db = FirebaseFirestore.getInstance()
     var usuario: String? = null
     var total: String? = null
 
-    val cant:String? = null
-    val fech:String? = null
-    val prod:String? = null
-    val usua:String? = null
-    val valo:String? = null
+    var keyLista: ArrayList<String> = ArrayList()
+    val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,63 +35,130 @@ class Buy_activity : AppCompatActivity() {
         cedula = findViewById<EditText>(R.id.txtCedula)
         telefono = findViewById<EditText>(R.id.txtTelefono)
         correo = findViewById<EditText>(R.id.txtCorreo)
-        tvTotal=findViewById<TextView>(R.id.tvTotal)
+        tvTotal = findViewById<TextView>(R.id.tvTotal)
 
         usuario = getIntent().getStringExtra("usuario")
         total = getIntent().getStringExtra("total")
 
         correo!!.setText(usuario)
-        tvTotal!!.setText("TOTAL A PAGAR $ "+total)
+        tvTotal!!.setText("TOTAL A PAGAR $ " + total)
+
+
 
 
     }
+    public fun extractKey(estado:String) {
 
-    private fun traerBD() {
+        println("entra a extracKey ")
 
-       var datos: MutableList<String> = mutableListOf<String>()
         db.collection("$usuario").get().addOnSuccessListener { document ->
-            var x = 0
+
             for (documento in document) {
+                var datos =
+                    (("$documento".substringAfter("key=$usuario/")).substringBefore(",")).toString()
+                keyLista.add(datos)
 
-              var datos=(("$documento".substringAfter("key=$usuario/")).substringBefore(","))
+            }
+            gestionKey(estado,keyLista)
+        }
+    }
 
-                db.collection("$usuario").document(datos).get().addOnSuccessListener {
+    public fun gestionKey(estado:String,keyLista: ArrayList<String>) {
+        println("linea47 pruebaa2" + keyLista)
 
-                    var cantidad = it.getString("cantidad").toString()
-                    var fecha:String? = it.getString("fecha")
-                    var producto:String? = it.getString("producto")
-                    var usuario:String? = it.getString("usuario")
-                    val valor:String? = it.getString("valor")
+        for(lista in keyLista){
+        db.collection("$usuario").document(lista).get().addOnSuccessListener { document ->
+            if (document.exists()) {
+                var usuario: String? = (document.getString("usuario"))
+                var producto: String? = (document.getString("producto"))
+                var valor: Int? = document.getLong("valor")?.toInt()
+                var cantidad: Int? = document.getLong("cantidad")?.toInt()
+                var estadoAntes:String? = document.getString("estado")
 
-                }
-
-                val listaProductos = hashMapOf(
-                //    "cantidad" to cantidad,
-                    "estado" to "vendidoSS")
-                var coleccion = db.collection("$usuario").document(datos)
-                    .set(listaProductos)
+                if(estadoAntes=="en carrito"){
+                assignNewState(estado, lista, usuario, producto, valor, cantidad)
+                }}
             }
         }
     }
 
+   public fun assignNewState(estado:String, keyLista: String, usuario: String?, producto: String?, valor: Int?, cantidad: Int?) {
 
 
-    private fun eliminarBDCarrito() {
+        var listaProductos = hashMapOf(
+            "cantidad" to cantidad,
+            "fecha" to sdf.format(Date()),
+            "producto" to producto,
+            "usuario" to usuario,
+            "valor" to valor,
+            "estado" to estado)
 
-         Toast.makeText(this,"COMPARANDO", Toast.LENGTH_LONG).show()
-          db.collection("carritoMercado").document("Cereales").delete()
-          db.collection("carritoMercado").document("Embutidos").delete()
-          db.collection("carritoMercado").document("Frutas").delete()
-          db.collection("carritoMercado").document("Proteinas").delete()
-          db.collection("carritoMercado").document("Salsas").delete()
-          db.collection("carritoMercado").document("Verduras").delete()
+        db.collection("$usuario").document(keyLista)
+            .set(listaProductos)
+
     }
 
-    fun envio(view: android.view.View) {
+    /*            db.collection("$usuario").document("L2vZhUHX3NOLWrt15wl5").get().addOnSuccessListener {
 
-        Toast.makeText(this,"SE INICA LA GESTION DE COMPRA ", Toast.LENGTH_LONG).show()
+                    var cantidad:String? = it.getString("cantidad").toString()
+                    var estado:String? = it.getString("cantidad").toString()
+                    var fecha:String? = it.getString("fecha").toString()
+                    var producto:String? = it.getString("producto").toString()
+                    var usuario:String? = it.getString("usuario").toString()
+                    var valor:String? = it.getString("valor").toString()
 
-      //  eliminarBDCarrito()
-       // traerBD()
+                    println(cantidad +""+ estado +""+ fecha +""+ producto +""+ usuario +""+ valor)*/
+/*                    var listaProductos = hashMapOf(
+                        "cantidad" to it.getString("cantidad"),
+                        "fecha" to it.getString("fecha"),
+                        "producto" to it.getString("producto"),
+                        "usuario" to it.getString("usuario"),
+                        "valor" to it.getString("valor"),
+                        "estado" to "vendido")
+
+                    println("ole  /// "+it.getString("producto"))
+                    println(listaProductos)
+
+                    db.collection("$usuario").document(datos)
+                        .set(listaProductos)*/
+    fun eliminarBDCarrito() {
+
+        Toast.makeText(this, "COMPARANDO", Toast.LENGTH_LONG).show()
+        db.collection("carritoMercado").document("Cereales").delete()
+        db.collection("carritoMercado").document("Embutidos").delete()
+        db.collection("carritoMercado").document("Frutas").delete()
+        db.collection("carritoMercado").document("Proteinas").delete()
+        db.collection("carritoMercado").document("Salsas").delete()
+        db.collection("carritoMercado").document("Verduras").delete()
+
+        db.collection("$usuario").get().addOnSuccessListener { document ->
+
+            for (documento in document) {
+                var datos =
+                    (("$documento".substringAfter("key=$usuario/")).substringBefore(",")).toString()
+                keyLista.add(datos)
+
+            }
+            gestionKey("cancelado",keyLista)
+        }
     }
+
+    public fun envio(view: View) {
+        eliminarBDCarrito()
+        extractKey("vendido")
+
+/*        db.collection("$usuario").get().addOnSuccessListener { document ->
+
+            for (documento in document) {
+                var datos =
+                    (("$documento".substringAfter("key=$usuario/")).substringBefore(",")).toString()
+                keyLista.add(datos)
+
+            }
+            gestionKey("vendido",keyLista)
+        }*/
+
+    }
+
+
 }
