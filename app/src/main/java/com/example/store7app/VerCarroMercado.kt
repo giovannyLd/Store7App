@@ -12,6 +12,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import androidx.recyclerview.widget.RecyclerView
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class VerCarroMercado : AppCompatActivity() {
@@ -26,6 +29,10 @@ class VerCarroMercado : AppCompatActivity() {
     //recycler view
     private lateinit var recyclerView: RecyclerView
     private var db = FirebaseFirestore.getInstance()
+    val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+    var keyLista: ArrayList<String> = ArrayList()
+
+
     var usuario:String?=null
  /*   private val listaProductos: List<ProductoEntity> = listOf(
         ProductoEntity("Arroz", "arroz- 2 - 1800"),
@@ -157,10 +164,51 @@ class VerCarroMercado : AppCompatActivity() {
         }
     }
 
+    fun extractKey(estado:String) {
+
+        println("entra a extracKey "+ estado)
+        Toast.makeText(this,"desde extractKey "+estado,Toast.LENGTH_LONG).show()
+        db.collection("$usuario").get().addOnSuccessListener { document ->
+            for (documento in document) {
+                var datos =
+                    (("$documento".substringAfter("key=$usuario/")).substringBefore(",")).toString()
+                keyLista.add(datos)
+            }
+            gestionKey(estado,keyLista)
+        }
+    }
+
+    fun gestionKey(estado:String,keyLista: ArrayList<String>) {
+        println("linea47 pruebaa2" + keyLista)
+        for(lista in keyLista){
+            db.collection("$usuario").document(lista).get().addOnSuccessListener { document ->
+                if (document.exists()) {
+                    var usuario: String? = (document.getString("usuario"))
+                    var producto: String? = (document.getString("producto"))
+                    var valor: Int? = document.getLong("valor")?.toInt()
+                    var cantidad: Int? = document.getLong("cantidad")?.toInt()
+                    var estadoAntes:String? = document.getString("estado")
+
+                    if(estadoAntes=="en carrito"){
+                        assignNewState(estado, lista, usuario, producto, valor, cantidad)
+                    }} } } }
+
+    public fun assignNewState(estado:String, keyLista: String, usuario: String?, producto: String?, valor: Int?, cantidad: Int?) {
+        var listaProductos = hashMapOf(
+            "cantidad" to cantidad,
+            "fecha" to sdf.format(Date()),
+            "producto" to producto,
+            "usuario" to usuario,
+            "valor" to valor,
+            "estado" to estado)
+        db.collection("$usuario").document(keyLista)
+            .set(listaProductos)
+    }
+
     fun cancelar(view: android.view.View) {
         Toast.makeText(this,usuario +" A CANCELADO EL PEDIDO", Toast.LENGTH_LONG).show()
 
-        var buy = Buy_activity()
+
 
         db.collection("carritoMercado").document("Cereales").delete()
         db.collection("carritoMercado").document("Embutidos").delete()
@@ -170,9 +218,9 @@ class VerCarroMercado : AppCompatActivity() {
         db.collection("carritoMercado").document("Verduras").delete()
         db.collection("carritoMercado").document("Verduras").delete()
 
-        println("se cancela pedido antes de  buy")
-            buy.extractKey("cancelada")
-        println("se cancela pedido despues buy")
+
+           extractKey("cancelada")
+
 
         val marker = Intent(this,MarkerActivity::class.java)
         marker.putExtra("usuario",usuario)

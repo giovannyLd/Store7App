@@ -47,25 +47,22 @@ class Buy_activity : AppCompatActivity() {
 
 
     }
-    public fun extractKey(estado:String) {
+    fun extractKey(estado:String) {
 
-        println("entra a extracKey ")
-
+        println("entra a extracKey "+ estado)
+        Toast.makeText(this,"desde extractKey "+estado,Toast.LENGTH_LONG).show()
         db.collection("$usuario").get().addOnSuccessListener { document ->
-
             for (documento in document) {
                 var datos =
                     (("$documento".substringAfter("key=$usuario/")).substringBefore(",")).toString()
                 keyLista.add(datos)
-
             }
             gestionKey(estado,keyLista)
         }
     }
 
-    public fun gestionKey(estado:String,keyLista: ArrayList<String>) {
+    fun gestionKey(estado:String,keyLista: ArrayList<String>) {
         println("linea47 pruebaa2" + keyLista)
-
         for(lista in keyLista){
         db.collection("$usuario").document(lista).get().addOnSuccessListener { document ->
             if (document.exists()) {
@@ -77,14 +74,9 @@ class Buy_activity : AppCompatActivity() {
 
                 if(estadoAntes=="en carrito"){
                 assignNewState(estado, lista, usuario, producto, valor, cantidad)
-                }}
-            }
-        }
-    }
+                }} } } }
 
    public fun assignNewState(estado:String, keyLista: String, usuario: String?, producto: String?, valor: Int?, cantidad: Int?) {
-
-
         var listaProductos = hashMapOf(
             "cantidad" to cantidad,
             "fecha" to sdf.format(Date()),
@@ -92,37 +84,11 @@ class Buy_activity : AppCompatActivity() {
             "usuario" to usuario,
             "valor" to valor,
             "estado" to estado)
-
         db.collection("$usuario").document(keyLista)
             .set(listaProductos)
+   }
 
-    }
-
-    /*            db.collection("$usuario").document("L2vZhUHX3NOLWrt15wl5").get().addOnSuccessListener {
-
-                    var cantidad:String? = it.getString("cantidad").toString()
-                    var estado:String? = it.getString("cantidad").toString()
-                    var fecha:String? = it.getString("fecha").toString()
-                    var producto:String? = it.getString("producto").toString()
-                    var usuario:String? = it.getString("usuario").toString()
-                    var valor:String? = it.getString("valor").toString()
-
-                    println(cantidad +""+ estado +""+ fecha +""+ producto +""+ usuario +""+ valor)*/
-/*                    var listaProductos = hashMapOf(
-                        "cantidad" to it.getString("cantidad"),
-                        "fecha" to it.getString("fecha"),
-                        "producto" to it.getString("producto"),
-                        "usuario" to it.getString("usuario"),
-                        "valor" to it.getString("valor"),
-                        "estado" to "vendido")
-
-                    println("ole  /// "+it.getString("producto"))
-                    println(listaProductos)
-
-                    db.collection("$usuario").document(datos)
-                        .set(listaProductos)*/
     fun eliminarBDCarrito() {
-
         Toast.makeText(this, "COMPARANDO", Toast.LENGTH_LONG).show()
         db.collection("carritoMercado").document("Cereales").delete()
         db.collection("carritoMercado").document("Embutidos").delete()
@@ -137,27 +103,18 @@ class Buy_activity : AppCompatActivity() {
                 var datos =
                     (("$documento".substringAfter("key=$usuario/")).substringBefore(",")).toString()
                 keyLista.add(datos)
-
             }
-            gestionKey("cancelado",keyLista)
-        }
-    }
+            gestionKey("cancelada",keyLista)
+        } }
 
     public fun envio(view: View) {
         eliminarBDCarrito()
         extractKey("vendido")
+    }
 
-/*        db.collection("$usuario").get().addOnSuccessListener { document ->
-
-            for (documento in document) {
-                var datos =
-                    (("$documento".substringAfter("key=$usuario/")).substringBefore(",")).toString()
-                keyLista.add(datos)
-
-            }
-            gestionKey("vendido",keyLista)
-        }*/
-
+    fun Cancelar(view: android.view.View) {
+        eliminarBDCarrito()
+        extractKey("cancelada")
     }
 
 

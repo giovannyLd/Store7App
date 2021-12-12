@@ -47,7 +47,7 @@
     <string name="text_contp">Confirm Password *</string>
     <string name="text_atc">Accept terms and conditions *</string>
     <string name="text_vtc">See terms and conditions *</string>
-    <string name="text_guardar">SAVE</string>
+    <string name="text_guardar">start compare</string>
     <string name="text_aran">BLUEBERRY Lb = $</string>
     <string name="text_ban">BANANA Lb = $</string>
     <string name="text_cer">CHERRY Lb = $</string>
@@ -125,6 +125,8 @@
     <string name="buscar">"buscar "</string>
     <string name="text_comprar">GESTION DE COMPRA</string>
     <string name="text_direccion">Ingrese direccion donde require el pedido</string>
+    <string name="text_cancelar">cancelar pedido</string>
+    <string name="text_guardarFormulario">Registrar</string>
 
     <!--Array con los valores de la cabecera de la tabla-->
     <string-array name="cabecera_tabla">

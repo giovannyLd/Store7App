@@ -146,7 +146,7 @@
                 android:layout_margin="20dp"
                 android:onClick="envio"
 
-                android:text="@string/text_guardar" />
+                android:text="@string/text_guardarFormulario" />
 
 
 
